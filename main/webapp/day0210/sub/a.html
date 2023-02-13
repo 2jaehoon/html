@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- hyper link : 다른 HTML 문서와 연결할 때 사용 
+<a href : "경로" target = "frame 또는 ifame의 이름" tile = "풍선 도움말">클릭할 내용</a>
+경로 : URL - protocol에서부터 정의하는 경로 - 외부 서버와 연결 가능
+		상대경로 - 서버명이 제외된 경로 - 내부의 파일로만 연결 가능
+		절대경로 - 절대경로는 절대 사용하지 않는다.
+-->
+상대 경로 <a href="font.html" title = "상대 경로">font.html과 연결</a><br>
+URL <a href="http://localhost/html_prj/day0210/font.html"  title = "URL">font.html과 연결</a><br>
+
+</br>
+<strong>다른 폴더에 존재하는 파일</strong><br>
+<!-- URL은 연결을 가진 파일의 경로가 변경되더라도 경로룰 수정할 필요가 없다. -->
+URL 사용 : <a href = "http://localhost/html_prj/day0209/hello.html">헬로우 파일</a></br>
+<!-- 연결점을 가진 폴더 안에서 해당 파일을 찾는다. : 404 -->
+상대 경로( URI 사용 ) : <a href = "hello.html">헬로우 파일</a><br>
+<!-- hello html은 day0209 폴더 안에 존재한다. day0209/hello.html을 작성하면
+a.html 파일이 존재하는 day0210 폴더 뒤로 경로가 연결된다.
+day0210/day0209/hello.html -->
+상대 경로( URI 사용 ) : <a href = "day0209/hello.html">헬로우 파일</a><br>
+<!-- URI는 연결점을 가진 파일의 경로가 변경되면 경로를 수정해줘야 한다. -->
+상대 경로( URI 사용 ) : <a href = "../../day0209/hello.html">헬로우 파일</a><br>
+
+
+
+</body>
+</html>

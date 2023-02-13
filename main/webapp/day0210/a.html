@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- hyper link : 다른 HTML 문서와 연결할 때 사용 
+<a href : "경로" target = "frame 또는 ifame의 이름" tile = "풍선 도움말">클릭할 내용</a>
+경로 : URL - protocol에서부터 정의하는 경로 - 외부 서버와 연결 가능
+		상대경로 - 서버명이 제외된 경로 - 내부의 파일로만 연결 가능
+		절대경로 - 절대경로는 절대 사용하지 않는다.
+-->
+상대 경로 <a href="font.html" title = "상대 경로">font.html과 연결</a><br>
+URL <a href="http://localhost/html_prj/day0210/font.html"  title = "URL">font.html과 연결</a><br>
+
+</br>
+<strong>다른 폴더에 존재하는 파일</strong><br>
+URL 사용 : <a href = "http://localhost/html_prj/day0209/hello.html">헬로우 파일</a></br>
+<!-- 연결점을 가진 폴더 안에서 해당 파일을 찾는다. : 404 -->
+상대 경로( URI 사용 ) : <a href = "hello.html">헬로우 파일</a><br>
+<!-- hello html은 day0209 폴더 안에 존재한다. day0209/hello.html을 작성하면
+a.html 파일이 존재하는 day0210 폴더 뒤로 경로가 연결된다.
+day0210/day0209/hello.html -->
+상대 경로( URI 사용 ) : <a href = "day0209/hello.html">헬로우 파일</a><br>
+
+상대 경로( URI 사용 ) : <a href = "../day0209/hello.html">헬로우 파일</a><br>
+
+오늘의 날씨는 <a href = "#void">기상청</a>에서 알아보세요.<br>
+
+관리자에게 <a href = "mailto:abc1234@naver.com" >메일</a>을<br>
+
+전화  : http://211.63.89.149/html_prj/day0210/a.html 들어가서
+<a href = "tel:043-231-1746">반장에게 전화를</a><br>
+문자 메시지 : 
+<a href = "sms:010-1234-1546">반장에게 메시지를</a><br>
+
+
+</body>
+</html>
