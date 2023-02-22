@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css"  href="http://localhost/html_prj/common/main_v20230217.css"/>
+<style type="text/css">
+div{ width: 400px; height: 100px; margin-bottom: 20px; border: 1px solid #333}
+</style>
+<script type="text/javascript">
+	function test(){
+	//id속성은 하나의 태그에만 부여되기 때문에 하나의 태그만 찾아진다.
+	var divNode=document.getElementById("id");
+	//아이디로 찾아낸 divNode에 HTML을 설정. innerHTML
+	divNode.innerHTML="<marquee>id로 찾은 태그(node)</marquee>" + "asd";
+	divNode.innerHTML="asdasdasdasdsad";
+	divNode.innerHTML="15151515asdasdasdasdsad" + "안되는데?";
+	
+	//alert( divNode )
+	// tag명으로 노드를 찾기 때문에  같은 이름의 태그가 여러 개 존재하고, 여러개의 태그가
+	// 찾아져서 나오게 된다.
+	var divNode=document.getElementsByTagName("div");
+	for( var i= 0 ; i < divNode.length ;i++){
+		//divNode[i].innerHTML="div라는 태그명으로 찾은 태그들";
+		//alert("tag명 " + i+"번째 " +divNode[i] )
+	}//end for
+	
+	// class 속성은 여러개의 태그가 부여받고, 여러개의 태그가 찾아져서 나오게된다.
+	var divNode=document.getElementsByClassName("cls");
+	for( var i= 0 ; i < divNode.length ;i++){
+	//	divNode[i].innerHTML="<strong>class 속성으로</strong>  태그명으로 찾은 태그들";
+		//alert( "class "+ i+"번째 " +divNode[i] )
+	}//end for
+	
+	}//test
+</script>
+</head>
+<body onload="test()">
+<div id="id"></div>
+<div class="cls"></div>
+<div class="cls"></div>
+</body>
+</html>

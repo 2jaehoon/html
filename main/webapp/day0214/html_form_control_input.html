@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML Form Control</title>
+</head>
+<body>
+<strong>input</strong>
+<br/>
+<!-- action 속성은 <form>태그의 자식 태그로 존재하는 HTML From Control의 값을 받게 되는 백엔드 페이지의 설정 -->
+<form action="backend.jsp">
+<!-- <input> -->
+<label>type = "text" 속성 사용</label>
+<input type = "text" name = "name"/><br/>
+
+<label>넓이( size = "크기" ) 속성 사용, 최대 입력 글자 수(maxlength = "글자 수") 속성 사용</label>
+<input type = "text" name = "name" size = "10" maxlength = "15"/><br/>
+
+<label>읽기 전용( readonly = "readonly" )속성 사용</label>
+<input type = "text" name = "read" size = "10" maxlength = "15" readonly = "readonly" value = "back-end로 전달"/><br/>
+
+<label>비활성화 ( disabled = "disabled" ) 속성 사용</label>
+<input type = "text" name = "dsisabled" size = "15" maxlength = "15" disabled = "disabled" value = "back-end로 전달 x"/><br/>
+<input type = "submit" value = "전송"/><br/>
+
+<label>비밀번호</label>
+<input type = "password" name = "pass" value = "test" size = "15" maxlength = "8" readonly = "readonly" /><br/>
+
+<label>체크박스</label>
+<!-- checkbox에 value의 속성을 사용하지 않으면 체크했을 때 on이 넘어가고
+그렇지 않으면 값이 넘어가지 않는다.
+value속성을 사용하면 체크했을 때 value속성의 값이 넘어가고
+그렇지 않으면 값이 넘어가지 않는다.
+ -->
+<input type = "checkbox"  name = "id_save"  value = "kim" checked = "checked"/>아이디 저장<br/>
+
+<label>성별</label>
+<!-- 라디오는 네임 속성이 같아야 그룹으로 묶여진다. 
+그룹으로 묶여지면 여러 개 중 하나만 선택된다. -->
+<input type = "radio" name = "gender" value = "남자"  checked = "checked" />남
+<input type = "radio" name = "gender" value = "여자" />여
+<br/>
+
+<label>hidden</label>
+<input type = "hidden" name = "hid" value = "숨겨서 넘길 값"/><br/>
+
+<label>파일 선택</label>
+<!-- input type = "file"은 value를 설정했더라도 value 값이 들어가지 않는다. -->
+<input type = "file" name = "file"  multiple="multiple"/><br/>
+
+<!-- 버튼 류 : <form> 태그 안에 정의되어야 동작을 한다.
+vaule 속성으로 label을 표현한다. -->
+<input type = "button" value = "버튼 모양" /><br/>
+<!-- HTML From control의 값이 로딩상태로 초기화 된다. -->
+<input type = "reset" value = "취소 버튼" /><br/>
+<input type = "submit" value = "전송 버튼" /><br/>
+
+
+
+
+</form>
+
+</body>
+</html>

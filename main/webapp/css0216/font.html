@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>글꼴 속성</title>
+<style type="text/css">
+/* embed 방식 */
+/* 
+#fontFamily{ font-family: 글꼴 ,,,,,,}
+접속자에게 글꼴이 없다면 앞에서부터 존재하는 글꼴로 적용된다.
+ */
+#fontFamily{ font-family: 궁서체, 굴림체, Gullim, "맑은 고딕", Sans-Serif }
+.fontSize{ font-size: 20px}
+.color{ color: skyblue}
+#fontWeight{ font-weight: bold  }
+/* text-decoration: underline */
+#under{ text-decoration: underline }
+#line{ text-decoration: line-through }
+#over{ text-decoration: overline }
+u{ text-decoration: none }
+b,strong { font-weight: normal; }
+.italic{ font-style: italic; }
+i, address{font-style: normal;}
+a{ text-decoration: none; color: #333 }
+
+</style>
+</head>
+<body>
+일반 글꼴
+<div id ="fontFamily">
+글꼴을 변경
+</div>
+<div class = "fontSize">
+글자의 크기
+</div>
+<div class = "color">
+안녕하세요
+</div>
+<div id = "fontWeight">
+진하게 안녕하세요
+</div>
+<div>
+<span id = "under">밑줄</span>
+<span id = "line">취소선</span>
+<span id = "over">윗줄</span>
+<u>밑줄 제거</u>
+</div>
+<div>
+<span id = "fontWeight">진하게</span>
+<b>진하게</b>
+<strong>진하게</strong>
+</div>
+<div>
+<span class="italic">일반글자 이탤릭</span>
+<i>이탤릭</i>
+<address>우리 집 주소</address>
+</div>
+
+<div>
+<a href="http://sist.co.kr">쌍용교육센터</a>
+
+</div>
+</body>
+</html>

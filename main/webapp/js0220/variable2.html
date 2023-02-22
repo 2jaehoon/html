@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css"></style>
+<script type="text/javascript">
+//변수의 사용
+var name = "테스트";
+//var를 붙여서 같은 이름의 변수를 여러 번 선언할 수 있다,
+var name = "헬";
+
+document.write(name + "<br>");
+
+//var로 선언된 변수는 hoisting이 된다. 아래에서 선언된 변수를 위에서 사용할 수 있다.
+document.write("hoisting : " + addr + "<br>");
+
+var addr = "서울시 강남구 역삼동";
+
+//const : 상수 : 값 변경 불가
+const tel = "010-1234-5678";
+document.write(tel + "<br>");
+//tel = "010-2222-3333";
+document.write(tel + "<br>");
+
+//let : 1. hoisting을 막을 때 사용
+alert(msg);
+let msg = "오늘은 이재훈씨에게 지적질을 씨게 당했다.";
+alert(msg);
+
+// let msg = "두고보자 이재훈!!; error
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

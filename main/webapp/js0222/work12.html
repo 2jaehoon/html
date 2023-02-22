@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.table{ border: 1px solid #333 }
+</style>
+
+<script type="text/javascript">
+var num = 0;
+var nameArr = new Array();
+function saveArr(){
+var name = prompt("메시지", "이름");
+nameArr[num++]=name; 
+}
+
+function addTable(){
+	var divNode=document.getElementById("div");
+	var add = "";
+	//concat은 왜 안될까?
+	 for(var i=0; i<nameArr.length; i++){
+	add += " <td> " + nameArr[i] + "</td>"; 
+	 }
+	 
+	divNode.innerHTML="<table class='table' border =1 bordercolor = '#333' cellspacing = 0 width = 300px height = 100px><tr>"+ add+ "</tr></table>";
+}
+	 
+</script>
+</head>
+<body>
+<input type = "button" value ="이름입력"  onclick="saveArr()"/>
+<input type = "button" value ="이름출력"  onclick="addTable()"/>
+<div id = "div"></div>
+
+</body>
+</html>

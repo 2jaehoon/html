@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css"></style>
+<script type="text/javascript">
+//지역변수:
+	//1. 선언 : var 변수명;
+	var day;
+	//2. 값 할당 : 변수명 =  값; 동적할당 : 값이 할당되면 데이터형이 결정된다.
+	day = 20;
+	//3. 값 사용 : console
+	console.log("오늘은" + day + "일 입니다.");
+	console.log(day + "의 데이터형" + typeof(day));
+	
+	day = "내 이름은 윤상준입니다."  // day의 데이터형이 문자열이 된다.
+	console.log("오늘은" + day + "일 입니다.");
+	console.log(day + "의 데이터형" + typeof(day));
+	
+	day = 2.20;//day의 데이터형이 number
+	console.log("오늘은" + day + "일 입니다.");
+	console.log(day + "의 데이터형" + typeof(day));
+	
+	day = true; //day의 데이터형이 boolean
+	console.log("오늘은" + day + "일 입니다.");
+	console.log(day + "의 데이터형" + typeof(day));
+	
+	function test(){
+		//전역과 지역의 차이
+		//지역 변수 : 함수 외부에서 사용할 수 없다.
+		var name = "오늘은 월요일";
+		//전역 변수 : 변수명 = 값; 함수 외부에서 사용할 수 있다,
+		addr = "서울시 강남구";
+		alert(name);// 자바스크립트는 ;를 생략할 수 있지만 넣는 게 좋다
+		alert(addr);
+	}//test
+	
+	//함수 호출
+	test();
+	
+	console.log("지역변수 : " + name); // 함수 외부에서 사용할 수 없음
+	console.log("전역변수 : " + addr); // 함수 외부에서 사용할 수 있음
+	
+	
+	
+</script>
+</head>
+<body>
+
+
+
+</body>
+</html>

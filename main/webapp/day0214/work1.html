@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>숙제</title>
+</head>
+<body>
+<form action="call.jsp">
+<table border = "1"  bordercolor="gray" cellspacing = "0"    >
+
+<tr height = "100">
+<td width = "250">
+&nbsp;&nbsp;<input type = "text"   placeholder="아이디 입력" style="width:220px; height:70px; border-color: gray" />
+</td >
+<td rowspan ="2" width = "150" >
+&nbsp;&nbsp;<input type = "button" value  = "로그인"  style="width:130px; height:50px; font-size: 1.4em; border-color: gray;"><br/>
+&nbsp;&nbsp;<input type = "checkbox" name = "아이디 저장" value = "lee"   /><font size = "4">아이디 저장</font>
+</td>
+</tr>
+
+<tr height = "100">
+<td>
+&nbsp;&nbsp;<input type = "text"   placeholder="비밀번호 입력" style="width:220px; height:70px; border-color: gray "  />
+</td>
+</tr>
+</table>
+
+<hr/>
+
+<table border = "1"  width = "100%" cellspacing = "0"  bordercolor = "gray" >
+<tr height = "50" >
+<td width = "10%" style = "font-size: 11px; border-bottom:none; border-right:none" ><strong><font color ="red" >* </font>아이디</strong></td>
+<td width = "90%" style="padding-left:10px; border-bottom:none"><input type = "text"  autofocus="autofocus"  placeholder="아이디 입력"  style = "height: 20px "> <input type = "button"  value = "ID 중복확인" >   </td>
+</tr>
+
+<tr height = "50">
+<td style = "font-size: 11px; border-bottom:none; border-right:none"><strong><font color ="red" >* </font>비밀번호</strong></td>
+<td style="padding-left:10px; font-size: 11px; border-bottom:none"><input type = "password"  placeholder="비밀번호 입력" style = "height: 20px">&nbsp;&nbsp;&nbsp;&nbsp;비밀번호 확인&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type = "password" style = "height: 20px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8~12자의 영문, 숫자, 특수문자 3가지를 조합하여 입력</td>
+</tr>
+
+<tr height = "50">
+<td style = "font-size: 11px; border-bottom:none; border-right:none"><strong><font color ="red" >* </font>이름</strong></td>
+<td style="padding-left:10px; border-bottom:none"><input type = "text" style = "height: 20px"></td>
+</tr>
+
+<tr height = "50">
+<td style = "font-size: 11px; border-bottom:none; border-right:none"><strong><font color ="red" >* </font>생일</strong></td>
+<td style="padding-left:10px; border-bottom:none"><input type = "date" style = "height: 20px"></td>
+</tr>
+
+<tr height = "50">
+<td style = "font-size: 11px; border-bottom:none; border-right:none"><strong><font color ="red" >&nbsp; </font>연락처</strong></td>
+<td  style="padding-left:10px; border-bottom:none"><input type = "text" style = "height: 20px"></td>
+</tr>
+
+<tr height = "50">
+<td style = "font-size: 11px; border-bottom:none; border-right:none"><strong><font color ="red" >* </font>휴대폰</strong></td>
+<td style="padding-left:10px; border-bottom:none"><input type = "text" style = "height: 20px"> <input type = "checkbox"> 수신</td>
+</tr>
+
+<tr height = "50">
+<td style = "font-size: 11px; border-bottom:none; border-right:none"><strong><font color ="red" >* </font>이메일</strong></td>
+<td style="padding-left:10px; border-bottom:none" ><input type = "text" style = "height: 20px"> @  
+<select name = "names" style = "height: 30px">
+<option value="google" >google.com</option>
+<option value="daum" >daum.net</option>
+<option value="nate"  >nate.com</option>
+<option value="naver" >naver.com</option>
+<option value="hotmal" >hotmal.com</option>
+<option value="ㅋ" >직접 입력</option>
+<option value="ㅋㅋ"  selected = "selected">선택해주세요.</option>
+</select>
+<input type = "checkbox"> 수신
+</td>
+</tr>
+
+<tr height = "50">
+<td style = "font-size: 11px; border-bottom:none; border-right:none"><strong><font color ="red" >* </font>성별</strong></td>
+<td style="padding-left:10px; border-bottom:none">
+<input type = "radio" name = "gender" value = "남자"  checked = "checked" /> 남자
+<input type = "radio" name = "gender" value = "여자"  /> 여자
+</td>
+</tr>
+
+
+
+<tr height = "50">
+<td style = "font-size: 11px; border-bottom:none; border-right:none"><strong><font color ="red" >&nbsp; </font>소재지</strong></td>
+<td style="padding-left:10px; border-bottom:none">
+<select name = "names" style = "width:150px; height: 30px">
+<option value="서울" >서울</option>
+<option value="경기" >경기</option>
+<option value="강원" >강원</option>
+<option value="충청도" >충청도</option>
+<option value="경상도" >경상도</option>
+<option value="전라도" >전라도</option>
+<option value="제주도" >제주도</option>
+<option value="ㅋㅋ" selected = "selected" >선택해주세요.</option>
+
+</select><br/>
+</td>
+</tr>
+
+
+
+<tr height = "50">
+<td style = "font-size: 11px; border-bottom:none; border-right:none"><strong><font color ="red" >* </font>우편번호</strong></td>
+<td style="padding-left:10px; border-bottom:none"><input type = "text" style = "height: 20px"> <input type = "button"  value = "우편번호 검색"></td>
+</tr>
+
+<tr height = "100">
+<td style = "font-size: 11px; border-right:none"><strong><font color ="red" >* </font>주소</strong></td>
+<td style="padding-left:10px; ">
+<p><input type = "text" style = "width:400px; height: 20px "></p>
+<p><input type = "text" style = "width:400px; height: 20px"></p>
+</td>
+</tr>
+
+</table>
+<font color ="red" >* </font>은 필수입력 사항<br>
+
+<div  style=" text-align: center;">
+<input type = "submit"  value = "확인" style = "width:250px; height: 70px; background-color: #000080;  color: white; font-size: 25px">
+<input type = "reset"  value = "취소"  style = "width:250px; height: 70px;  background-color: gray;  color: white;  font-size: 25px   ">
+</div>
+</form>
+
+
+
+
+
+</body>
+</html>

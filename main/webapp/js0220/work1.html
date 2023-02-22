@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css"></style>
+<script type="text/javascript">
+var born = prompt("태어난 해");
+var date = new Date();
+var year = date.getFullYear();
+var age = year - born;
+console.log("현재 나이" + age);
+
+var gender = prompt("성별 남자? 여자?");
+switch(gender){
+case "남자": 
+	document.write("<div style = \"background-color:blue; width:150px; height:150px; border-radius:75px\"></div>");
+	break;
+case "여자": 
+	document.write("<div style = \"background-color:red; width:150px; height:150px; border-radius:75px\"></div>");
+}
+
+var RGB = prompt(" RGB입력 ");
+document.write("<div style = \"width:100px; height:100px; background-color:"+RGB+"\"> </div> "  )
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

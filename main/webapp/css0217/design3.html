@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#wrap{ width: 900px; height: 1200px;  margin: 0px auto; border: 1px solid #333}
+#header{  height: 200px; text-align: center }
+
+#container{ height: 900px; position: relative; border: 1px solid #333}
+/*  
+콘테이너에서 포지션 릴레티브가 설정었고 콘테이너의 자식인
+로그인박스는 콘테이너의 시작점인 로그인박스의 시작좌표가 된다.
+*/
+
+#loginBox{ width: 300px; height: 200px; position: absolute; top: 650px;  background-color: #333}
+#add{ width: 600px; height: 200px;  position: absolute; left:300px ;background-color: #333}
+#footer{ width: 900px; height: 100px; }
+</style>
+</head>
+<body>
+<div id = "wrap"><!-- wrap( w:900 h:1200) -->
+<div id = "header">header( w:900 h:200)</div>
+<div id = "container"><!-- container( w:900 h:900) -->
+<div id="loginBox">loginBox( w:300 h:200)</div>
+<div id="add">add( w:600 h:200)</div>
+</div>
+<div id = "footer">footer( w:900 h:100)</div>
+</div>
+</body>
+</html>

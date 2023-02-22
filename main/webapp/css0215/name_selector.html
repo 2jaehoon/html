@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>name selector</title>
+<style type = "text/css">
+/*
+tag selector : 속성 = "값"을 가진 태그라면 여러 개의 태그가 적용받을 수 있다.
+문법 
+[속성명 = '값'] { 속성 : 값;  ... }
+
+사용법) - 여러 개의 태그에서 사용할 수 있다.
+<태그명 속성명 = "값"
+  */
+  
+ [type='text'] { font-size: 20px; height: 30px; width: 200px }
+ [name='pass'] { font-size: 30px; height: 35px; width: 300px }
+ [value='010-xxxx-xxxx'] { color: #00ff00 } 
+</style>
+</head>
+<body>
+<input type = "text" name = "name" value="이름"/><br/>
+<input type = "password" name = "pass" value="pass"/><br/>
+<input type = "text" name = "email" value="이메일"/><br/>
+<input type = "tel" name = "phone" value="010-xxxx-xxxx"/><br/>
+<input type = "text" name = "addr" value="주소" readonly="readonly"/><br/>
+
+
+</body>
+</html>

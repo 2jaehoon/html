@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*  margin: 여백 설정, 객체 가운데 설정
+               x, y
+               0px auto
+*/
+table{ border: 1px solid #444; width: 300px; height: 100px
+; text-align: center; margin: 0px auto  }
+
+div{ width: 300px; height: 100px; border: 1px solid #444; margin-bottom: 10px }
+
+/* 객체 정렬 ㅇㅚㄴ 오  float: left */
+#div1{ float: left;  }
+/* float은 아래로 상속 clear: both쓰면 상속 사라짐 */
+#div2{ clear: both; margin: 40px auto}
+#div3{ float: right; }
+</style>
+</head>
+<body>
+<table>
+<tr>
+<td>ㅎㅇㅎㅇ</td>
+</tr>
+</table>
+<div id = "div1">
+왼정렬
+</div>
+<div id = "div2">
+가운데
+</div>
+<div id = "div3">
+오정렬
+</div>
+</body>
+</html>

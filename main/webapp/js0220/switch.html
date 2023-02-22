@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css"></style>
+<script type="text/javascript">
+var blood = prompt("혈액형을 입력해주세여 A,B,AB,O");
+
+var img = "";
+switch( blood.toUpperCase() ){
+case "A" : img = "a.png"; break;
+case "B" : img = "b.png"; break;
+case "AB" : img = "ab.png"; break;
+case "O" : img = "o.png"; break;
+default : img = "none.png"; 
+}//switch
+
+document.write( blood + "의 특징은 <br/>" );
+document.write(" <img src = 'images/" + img+"'/>");
+</script>
+</head>
+<body>
+
+</body>
+</html>

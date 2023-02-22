@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css"></style>
+<script type="text/javascript">
+function call(){
+	alert("자바스크립트 코드 호출 called!!!!");
+}
+
+</script>
+</head>
+<body>
+<!-- <body onload="call()"> --> <!-- html body의 로딩과 자바스크립트의 코드를 동시에 호출할 때 -->
+<h2>HTML 영역에서 사용자의 동작이 있을 때 JavaScript 코드 호출</h2>
+<input type = "button" class = "btnBorder" value = "클릭" onclick="call()"/>
+<div style = "border: 1px solid #333; width:  300px; height: 100px" onclick="call()">
+
+</div>
+<!-- 온로드는 바디에서만 동작한다.
+<div onload="call()">
+onload
+</div> -->
+<label>키가 눌리면</label><!-- 눌린 키의 정보를 얻을 수 없다. -->
+<input type = "text" class = "inputBox"  onkeydown="call()"/><br>
+<label>키가 올라옴</label><!-- 눌린 키의 정보를 얻을 수 있다.  -->
+<input type = "text" class = "inputBox"  onkeyup="call()"/><br>
+<label>마우스포인터가 올라오면</label>
+<img src = "http://localhost/html_prj/common/images/tae.png" onmouseover="call()"/><br>
+<label>마우스포인터가 빠져나가면</label>
+<img src = "http://localhost/html_prj/common/images/tae.png" onmouseout="call()"/><br>
+<label>변경</label>
+<select onchange="call()"><!-- 이전의 선택된 옵션과 다른 옵션이 선택되면 변경된 것으로 간주하여 호출 -->
+<option value = "1">-----1--------</option>
+<option value = "2">-----2--------</option>
+<option value = "3">-----3--------</option>
+<option value = "4">-----4--------</option>
+</select>
+<!-- 인풋은 커서가 들어갔을 떄의 값과 커서가 빠져나갔을 때의 값이 다르다면 변경된 것으로 판단 -->
+<br/>
+<input type = "text" class = "inputBox" onchange="call()"/><br>
+<br/>
+<label>커서가 빠져 나가면 호출</label>
+<input type = "text" class = "inputBox" onblur="call()"/><br>
+<label>더블클릭</label>
+<input type = "button" class = "inputBox" ondblclick="call()"/><br>
+<br>
+<<!-- href속성의 값은 html파일을 연결 call() html이 존재하지 않기 때문에 404가 발생 -->
+<a href="call()">자바 스크립트 함수 호출</a><br>
+
+<!-- html역여게서 javascript 영역으로 영역의 전환 javascript -->
+<a href = "javascript: call()">영역 전환</a><br>
+<a onclick="call()">a 태그에서 함수 호출</a><br>
+
+</body>
+</html>

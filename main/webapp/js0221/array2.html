@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css"></style>
+<script type="text/javascript">
+//기본형 형식의 사용 : var 배열명 = [값,,,,,,,,];
+var arr = [2023,2,21,"화요일",false,"내일은 수요일"];
+
+document.write(arr.length + "<br>");
+
+for(var i = 0; i<arr.length; i++){
+document.write(arr[i] + "<br>");
+}	
+
+document.write( "<br>");
+//마지막 방에서부터 처음 방까지 <input type = "text"에 값을 넣어 출력
+for(var i = arr.length-1; i>-1; i--){
+	document.write("<input type = 'text' value ='" + arr[i] + "' class='inputBox'>");
+}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

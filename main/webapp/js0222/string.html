@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css"></style>
+<script type="text/javascript">
+//문자열 함수:
+//문자열 길이 : length - 키워드이므로 ()를 사용하면 error
+var msg = "Abcde안녕";
+document.write(msg + "의 글자수 : " + msg.length + "<br>");
+document.write(msg + "를 모두 대문자로 : " + msg.toUpperCase() + "<br>");
+document.write(msg + "를 모두 소문자로 : " + msg.toLowerCase() + "<br>");
+
+//문자열 내에 특정 문자열의 인덱스를 얻기 : indexOf("찾을 문자열")
+document.write(msg + "에서 'c'의 인덱스 : " + msg.indexOf('c') + "<br>");
+document.write(msg + "에서 'de'의 인덱스 : " + msg.indexOf('de') + "<br>");
+//문자열 내에 특정 문자열이 없다면 -1
+document.write(msg + "에서 'aa'의 인덱스 : " + msg.indexOf('aa') + "<br>");
+
+//특정 인덱스의 문자 하나 얻기 : charAt( 인덱스 )
+document.write(msg + "에서 5번째의 인덱스 문자열 : " + msg.charAt(5) + "<br>");
+
+let emailArr=["test.com","test@test.com","test@sist.co.kr","tet@naver.com","test", "helleo@test"];
+//이메일 배열에 들어있는 이메일이 유효핝 출력하는 코드 작성
+//이메일은 @과 .이 있어야 한다.
+for(var i =0; i<emailArr.length; i++){
+	if(emailArr[i].indexOf('@')!=-1&&emailArr[i].indexOf('.')!=-1){
+		document.write(emailArr[i] + "<br>");
+	}
+	
+}
+//문자열 합치기
+var msg = "안녕";
+document.write(msg.concat("오늘은 수요일입니다.") + "<br>");
+
+//자식 문자열 자르기 : substring(시작인덱스, 끝인덱스+1);
+var msg = "오늘은 JavaScript 수업";
+document.write("문자열 자르기 : " + msg.substring(4) + "<br>" );
+document.write("문자열 자르기 : " + msg.substring(4,13) + "<br>" );
+
+var msg = "  수 요일   ";
+document.write("앞 뒤 공백자르기 : [" + msg.trim() + "] <br>")
+
+var msg = "java, javaScript, Oracle";
+//치환 : replace : 가장 처음 찾아지는 문자 하나만 변경
+document.write("앞 뒤 공백자르기 : [" + msg.replace('a', 'k') + "] <br>")
+//치환 : replaceAll : 모든 문자열을 찾아서 변경
+document.write("앞 뒤 공백자르기 : [" + msg.replaceAll('a', 'k') + "] <br>")
+
+//Comma Separated Values
+var csvData = "모민경, 김경태, 김규미, 정다현";
+let nameArr = csvData.split(",");
+for(var i =0; i<nameArr.length;  i++){
+	document.write(nameArr[i] + "<br>")
+}
+
+var msg = "서울시 강남구 역삼동";
+document.write(msg.startsWith("서울시") + "<br>")
+document.write(msg.endsWith("역삼동") + "<br>")
+//contains, equals 둘다 제공x
+
+
+</script>
+
+</head>
+<body>
+<div id = "id"></div>
+<div class =  "class"></div>
+</body>
+</html>
