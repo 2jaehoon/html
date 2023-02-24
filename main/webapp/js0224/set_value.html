@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+function setValue(){
+	var obj = document.frm;
+	// JS에서 발생한 값을 HTML FORM Control에 설정
+	// document.폼이름.control명.value = 값;
+	var name = "윤상준";
+	
+	obj.name.value = name;// text
+	obj.age.value = 26;// password
+	// obj.ta.value = obj.age.value;
+	obj.addr.value = "서울시 동작구 상도동";// hidden
+	
+	// obj.file.value = "e:/dev/env.bat";// file : error
+	// img는 value가 아닌 src로 변경한다.
+	obj.img.src = "http://localhost/html_prj/common/images/daum.png";
+	obj.ta.value = "오늘은 금요일입니다.";//textarea
+}
+
+function input(){
+	var obj = document.frm;
+	var name1 = obj.name1.value;
+	var age1 = obj.age1.value;
+	var date = new Date();
+	var year = date.getFullYear();
+	var bornyear = year-age1
+	
+	document.getElementById("output2").innerHTML
+	= "이름 : " + name1 + " 나이 : " + age1 + " 생년월일 : " + bornyear;
+	obj.ta1.value = name1 + "님\n나이" + age1 + "살\n" + bornyear + "년생";
+}
+
+
+</script>
+</head>
+<body>
+
+<form action="" name="frm">
+<h2>name속성이 유일한  HTML Form Control의 값 설정</h2>
+<label>이름</label>
+<input type="text" name="name" class="inputBox"/><br/>
+<label>나이</label>
+<input type="password" name="age" class="inputBox"/><br/>
+<label>주소</label>
+<input type="hidden" name="addr" /><br/>
+<label>파일</label>
+<input type="file" name="file" /><br/>
+<label>이미지</label><!-- img 태그는 src속성으로 이미지를 설정한다.  -->
+<img src="http://localhost/html_prj/common/images/tae.png" name="img"/><br>
+
+<label>textarea</label>
+<textarea rows="5" cols="50" name="ta"></textarea>
+<br/>
+<input type="button" value="값 설정" class="inputBox" onclick="setValue()" /><br/><br/>
+
+
+
+<label>이름</label>
+<input type="text" name="name1" class="inputBox"/><br/>
+<label>나이</label>
+<input type="text" name="age1" class="inputBox"/><input type = "button" value = "입력" onclick = "input()"/> <br/>
+<textarea rows = "5" cols = "50" name = "ta1"></textarea><br/>
+<div id="output2"></div>
+
+
+</form>
+
+</body>
+</html>

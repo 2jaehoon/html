@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css"  href="http://localhost/html_prj/common/main_v20230217.css"/>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+function getRadio(){
+	// radio는 여러개 중 하나만 선택될 수 있으므로 value로 얻을 수 있다.
+	var obj=document.frm;
+	var gender=obj.gender.value; //
+	
+	/* var gender2=""; //for를 돌리지 않는다. 
+	for(var i= 0 ; i < obj.gender.length ; i++){
+		if( obj.gender[i].checked ){
+			alert( obj.gender[i].value+" 가 선택");
+		}
+	} */
+	
+	var divNode=document.getElementById("output");
+	divNode.innerHTML=gender;
+}
+
+function getChk(){
+	var obj=document.frm;
+	//alert( obj.hobby.value );// checkbox는 라디오와 다르게  .value로 값을 얻을 수 없다.
+	
+//	var checkedHobby;//undefined가 기본값으로 할당 
+	var checkedHobby="";// 
+	//1. 모든 체크박스를 얻는다. 
+	var hobby=obj.hobby; // 이름이 같다면 배열로 얻어진다. 
+	for( var i = 0 ; i < hobby.length ; i++ ){
+		//alert( obj.hobby[i].checked)
+		//2. 체크박스의 선택된 상태를 얻는다.
+		if( obj.hobby[i].checked ){
+		//3. 선택되었다면 값을 얻는다. 
+		checkedHobby += obj.hobby[i].value+" ";
+		}//end if
+	}//end for
+	
+	document.getElementById("output").innerHTML= checkedHobby;
+}//getChk
+</script>
+</head>
+<body>
+<form name="frm">
+	<input type="radio" name="gender" value="남자">남자
+	<input type="radio" name="gender" value="여자">여자
+	<input type="radio" name="gender" value="아조씨">아조씨
+	<input type="button" value="라디오 값 얻기" class="btnBorder" onclick="getRadio()">
+	<br>
+	
+	<input type="checkbox" name="hobby" value="음악감상">음악감상<br/>
+	<input type="checkbox" name="hobby" value="미술감상">미술감상<br/>
+	<input type="checkbox" name="hobby" value="축구">축구<br/>
+	<input type="checkbox" name="hobby" value="스노우보드">스노우보드<br/>
+	<input type="checkbox" name="hobby" value="자바">자바<br/>
+	<input type="button" value="체크박스 값 얻기" class="btnBorder" onclick="getChk()">
+	
+</form>
+<div id="output"></div>
+</body>
+</html>

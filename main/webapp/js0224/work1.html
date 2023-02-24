@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="http://localhost/html_prj/common/main_v20230217.css"/>
+<style type="text/css">
+div{ border: 1px solid #333; width: 500px; height: 200px; }
+</style>
+<script type="text/javascript">
+var firstDice = parseInt( Math.random()*6 )+1;
+var secondDice = parseInt( Math.random()*6 )+1;
+var value = firstDice;
+var value2 = secondDice;
+
+var text = "";
+var text2 = "";
+switch(value){
+case 1:
+text = "<img src = 'http://localhost/html_prj/js0224/images/dice_1.png'/>";
+break;
+case 2:
+text = "<img src = 'http://localhost/html_prj/js0224/images/dice_2.png'/>";
+break;
+case 3:
+text = "<img src = 'http://localhost/html_prj/js0224/images/dice_3.png'/>";
+break;
+case 4:
+text = "<img src = 'http://localhost/html_prj/js0224/images/dice_4.png'/>";	
+break;
+case 5:
+text = "<img src = 'http://localhost/html_prj/js0224/images/dice_5.png'/>";
+break;
+case 6:
+text = "<img src = 'http://localhost/html_prj/js0224/images/dice_6.png'/>";
+break;
+}
+
+switch(value2){
+case 1:
+text2 = "<img src = 'http://localhost/html_prj/js0224/images/dice_1.png'/>";
+break;
+case 2:
+text2 = "<img src = 'http://localhost/html_prj/js0224/images/dice_2.png'/>";
+break;
+case 3:
+text2 = "<img src = 'http://localhost/html_prj/js0224/images/dice_3.png'/>";
+break;
+case 4:
+text2 = "<img src = 'http://localhost/html_prj/js0224/images/dice_4.png'/>";	
+break;
+case 5:
+text2 = "<img src = 'http://localhost/html_prj/js0224/images/dice_5.png'/>";
+break;
+case 6:
+text2 = "<img src = 'http://localhost/html_prj/js0224/images/dice_6.png'/>";
+break;
+
+}
+
+function throwDice(){
+	var tag = document.getElementById( "output" );
+	tag.innerHTML = text + text2;
+	
+}
+</script>
+</head>
+<body onload = "throwDice()">
+
+<form>
+<input type="button" value="던지기" style="border: 1px solid #333; width: 100px; height:50px;" onclick="window.location.reload()"/><br/>
+<div id="output">
+
+</div>
+<label>결과</label>
+<input type="text" class="inputBox"/>
+</form>
+
+</body>
+</html>

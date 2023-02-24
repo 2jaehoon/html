@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+function setRadio(){
+	var obj = document.frm;
+	// checked  = true; // 확인된 상태
+	// web은 name 속성이 같으면 배열로 처리된다.
+	// 정의된 순서대로 0부터 인덱스를 가진다.
+	obj.gender[2].checked = true;
+}//setRadio
+
+function setChk(){
+	var obj = document.frm;
+	
+	obj.hobby[3].checked = true;
+	 obj.hobby[0].checked = true;
+	
+}
+
+function setAll(){
+	var obj = document.frm;
+	
+	for(var i = 0; i < obj.hobby.length; i++){
+		obj.hobby[i].checked = obj.flag.checked;//obj.flag.checked에서 true, false값으로 가져올 수 있음 체크를 하거나 안 함으로써
+	}//end for
+	
+}//setAll
+
+</script>
+</head>
+<body>
+<form name="frm">
+	<input type="radio" name="gender" value="남자">남자
+	<input type="radio" name="gender" value="여자">여자
+	<input type="radio" name="gender" value="아조씨">아조씨
+	<input type="button" value="라디오 상태 변경" class="btnBorder" onclick="setRadio()">
+	<br>
+	
+	<input type="checkbox" name="flag" onclick = "setAll()"/>전체<br/>
+	<input type="checkbox" name="hobby" value="음악감상">음악감상<br/>
+	<input type="checkbox" name="hobby" value="미술감상">미술감상<br/>
+	<input type="checkbox" name="hobby" value="축구">축구<br/>
+	<input type="checkbox" name="hobby" value="스노우보드">스노우보드<br/>
+	<input type="checkbox" name="hobby" value="자바">자바<br/>
+	<input type="button" value="체크박스 상태 변경" class="btnBorder" onclick="setChk()">
+	
+</form>
+<div id="output"></div>
+</body>
+</html>

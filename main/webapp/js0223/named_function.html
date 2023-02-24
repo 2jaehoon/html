@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css"  href="http://localhost/html_prj/common/main_v20230217.css"/>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+//기명함수 (named function)
+//작성법)
+/*
+  function 함수명(매개변수,,,,){
+	코드 작성
+	return 값;
+	}
+ */
+function test(){
+	 alert("매개변수 없는 함수 ");
+ }//tet
+ //test(); 바로 호출 가능
+ 
+ //매개변수에는 var를 붙이지 않는다.
+ function test1(name, addr){
+	alert("이름 : "+ name+", 주소 : "+ addr);
+ }
+ 
+ //반환형
+ function test2(){
+	 return "오늘은 목요일 입니다.";
+ }//test2
+ 
+ function test3(){
+	 var msg=test2();
+	 alert( msg );
+ }//test3
+ 
+ function test4( name ){
+ 	if(name == "김경태"){
+		 name="반장 " +name; 
+	 }//end if
+	 return name+"님 안녕하세요?";
+ }//test4
+ 
+ function useTest4( name ){
+	 let msg=test4(name);
+	 alert( msg )
+ }//useTest4
+ 
+ //ECMAScript 6 : ES6 에서는 매개변수에 초기값을 설정할 수 있다.
+ //function 함수명( 매개변수=값 ,, , ,)
+function test5(name='김경태', age=0){
+	 alert( name+", "+age);
+ }//test
+	 
+</script>
+</head>
+<body>
+<a href="javascript:test()">호출</a><br/>
+<input type="button" value="호출" class="btnBorder" onclick="test1('이재훈' ,'마계인천시')"/>
+<input type="button" value="반환형호출" class="btnBorder" onclick="alert(test2())"/>
+<br/>
+<input type="button" value="반환형호출2" class="btnBorder" onclick="test3()"/>
+<br/>
+<input type="button" value="반환형호출3" class="btnBorder" onclick="alert(test4('김규미'))"/>
+<br/>
+<input type="button" value="반환형호출3" class="btnBorder" onclick="useTest4('김경태')"/>
+<br/>
+<input type="button" value="초기값호출" class="btnBorder" onclick="test5('윤상준',20)"/>
+<br/>
+<input type="button" value="초기값호출2" class="btnBorder" onclick="test5()"/>
+</body>
+</html>

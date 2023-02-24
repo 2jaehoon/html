@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+function getInfoValue(){
+	var obj = document.frm;
+var output = "";
+var name = obj.name.value;
+var pass1 = obj.pass1.value;
+var pass2 = obj.pass2.value;
+var born =  ( obj.pass1.value ).substring(0, 2);
+var gender = "";
+var ddi = "";
+var country = "";
+
+var checkValue1 = parseInt(pass1.substring(0,1));
+var checkValue2 = parseInt(pass1.substring(1,2));
+var checkValue3 = parseInt(pass1.substring(2,3));
+var checkValue4 = parseInt(pass1.substring(3,4));
+var checkValue5 = parseInt(pass1.substring(4,5));
+var checkValue6 = parseInt(pass1.substring(5,6));
+
+var checkValue7 = parseInt(pass2.substring(0,1));
+var checkValue8 = parseInt(pass2.substring(1,2));
+var checkValue9 = parseInt(pass2.substring(2,3));
+var checkValue10 = parseInt(pass2.substring(3,4));
+var checkValue11 = parseInt(pass2.substring(4,5));
+var checkValue12 = parseInt(pass2.substring(5,6));
+var checkValue13 = parseInt(pass2.substring(6,7));
+
+var checkSumValue =( 11 - ( (checkValue1*2 + checkValue2*3 + checkValue3*4 + checkValue4*5 + checkValue5*6
++ checkValue6*7 + checkValue7*8 + checkValue8*9 + checkValue9*2 + checkValue10*3 + checkValue11*4 + checkValue12*5)%11 ) )%10;
+
+
+
+
+output += checkSumValue + "님 <br>";
+
+
+
+
+
+if(name.length !=0){
+	output += name + "님 <br>";
+}else{
+	alert("이름 글자 입력해랑");
+    document.frm.name.focus();
+}
+
+
+if(pass1.length != 0 || pass2.length != 0){
+if(pass1.length == 6 && pass2.length ==7){
+if(  (obj.pass1.value).indexOf(0)==3|| (obj.pass1.value).indexOf(0)==4 ){
+	born =  parseInt(born) + 2000;
+	country = "내국인";
+}else if( (obj.pass1.value).indexOf(0)==1|| (obj.pass1.value).indexOf(0)==2  ){
+	born =  parseInt(born) + 1900;
+	country = "내국인";
+}else if( (obj.pass1.value).indexOf(0)==5|| (obj.pass1.value).indexOf(0)==6  ){
+	born =  parseInt(born) + 1900;
+	country = "외국인";
+}else if( (obj.pass1.value).indexOf(0)==7|| (obj.pass1.value).indexOf(0)==8  ){
+	born =  parseInt(born) + 2000;
+	country = "외국인";
+}else if( (obj.pass1.value).indexOf(0)==9|| (obj.pass1.value).indexOf(0)==0  ){
+	born =  parseInt(born) + 1800;
+	country = "내국인";
+}
+
+
+
+output += pass1 + " - ";
+output += pass2 + "<br>";
+}else{
+	alert("주민번호 글자 수 맞게 입력");
+}
+}else{
+	alert("주민번호를 입력하세용");
+	document.frm.pass1.focus();
+}
+
+if(checkSumValue == checkValue13){
+	output += "주민 유효 : 유효" + "<br>";
+	
+output += " 태어난 해 " + born + "<br>";
+
+var birthday = pass1.substring(2, 7);
+output += "생년월일 : " + birthday + "<br>";
+
+var genderTestNum = pass2.substring(0,1);
+
+if(  genderTestNum==1|| genderTestNum==3 ){
+
+	gender = "남자";
+}
+
+if( genderTestNum==2|| genderTestNum==4 ){
+	gender = "여자";
+}
+
+output += "성별 : " + gender + "<br>";
+
+switch (born % 12)
+{
+case 0: ddi = "원숭이띠";break;
+case 1: ddi = "닭띠";break; 
+case 2: ddi = "개띠";break; 
+case 3: ddi = "돼지띠";break; 
+case 4: ddi = "쥐띠";break; 
+case 5: ddi = "소띠";break; 
+case 6: ddi = "호랑이띠";break; 
+case 7: ddi = "토끼띠";break; 
+case 8: ddi = "용띠";break;
+case 9: ddi = "뱀띠";break; 
+case 10: ddi = "말띠";break; 
+case 11: ddi = "양띠";break; 
+}
+
+
+output += "띠 : " + ddi + "<br>";
+output += "국적 : " + country + "<br>";
+
+
+
+
+var divNode = document.getElementById("output");
+divNode.innerHTML=output;
+}else{
+	output += "주민 유효 : 무효" + "<br>";
+}
+}
+</script>
+</head>
+<body>
+<form action="" name="frm">
+<label>이름</label>
+<input type = "text"  class="inputBox"  name="name"/> <br><br>
+<label>주민번호</label>
+ <input type = "text"  class="inputBox"/ name="pass1"> - <input type = "password"  class="inputBox" name="pass2"/><br>
+<input type = "button" value = "입력" onclick="getInfoValue()"/><br>
+<div style = "border: 1px solid #333;  width: 400px; height: 200px" id = "output"></div>
+</form>
+</body>
+</html>

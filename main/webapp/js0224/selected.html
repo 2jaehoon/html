@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+function getSelected(){
+	var obj = document.frm;
+	
+	// alert( obj.subject.value );
+	// 선택된 인덱스를 얻기 : selectedIndex
+	if( obj.subject.selectedIndex != 0 ){
+		//1. select을 얻으면 배열로 옵션이 얻어와진다.
+		for( var i = 0; i < obj.subject.length; i++ ){
+			// 2. 옵션 중에 선택된 옵션이 존재하는지?
+			if( obj.subject[i].selected ){
+				// 3. 값 얻기
+				alert( obj.subject[i].selected );
+				// 4. 밖으로
+				break;
+			}// end if
+		}// end for
+		
+	}//end
+	
+}//getSelected
+</script>
+</head>
+<body>
+<form action = "" name = "frm">
+<select name = "subject" class = "inputBox">
+<option value = "none">---선택---</option>
+<option value = "자바">자바</option>
+<option value = "html">html</option>
+<option value = "css">css</option>
+<option value = "javascript">javascript</option>
+</select>
+<input type = "button" value = "값 얻기" class= "btnBorder" onclick="getSelected()" />
+</form>
+</body>
+</html>

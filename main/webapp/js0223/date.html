@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css">
+#div{ border:1px solid #333; width:400px; height: 100px; overflow: auto }
+</style>
+<script type="text/javascript">
+function useDate(){
+	//날짜 얻기 :자바스크립트에서 date 객체를 생성하면 접속자 컴퓨터의 날짜 정보가 얻어진다.
+	var date = new Date();
+	var divNode = document.getElementById("div");
+	var output =  date+"<br>";
+	
+	//년 얻기
+	// output += ( date.getYear()+1900 ) + "년 <br/>"	
+	output +=  date.getFullYear() + "년 <br/>"	
+	// 월 얻기 : 0월부터 11월이 나온다.
+	output +=  ( date.getMonth()+1 ) + "월 <br/>"	
+	// 일 얻기
+	output +=  date.getDate() + "일 <br/>"	
+	// 요일 얻기 : 이번 주에 몇번째 날
+	output +=  date.getDay() + "요일<br/>"	
+	
+	output +=  date.getHours()+  "시<br/>"	
+	output +=  date.getMinutes()+  "분<br/>"	
+	output +=  date.getSeconds()+  "초<br/>"	
+	
+	
+	divNode.innerHTML = output;
+}
+</script>
+</head>
+<body>
+<div id="div"></div>
+<input type ="button" value = "시간정보 얻기" class = "btnBorder" onclick = "useDate()"/> 
+</body>
+</html>

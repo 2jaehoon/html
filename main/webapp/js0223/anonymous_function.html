@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css"></style>
+<script type="text/javascript">
+//무기명 함수(anonymous function)
+// 함수가 변수에 할당 될 수 있다.( first class function )
+//작성법
+// function( 매개변수들 ) { 코딩 }
+
+var func = function(name, addr){
+	alert("입력 이름 : " + name + ", 입력 주소 : " + addr);
+}
+// 호출
+// 변수명(값들)
+func('윤상준','서울시 강남구 역삼동');
+
+// 함수는 변수에 할당될 수 있다.
+function test(func1){
+	func1('이단군','서울사 동대문구 동대문동');
+}
+
+function test2(){
+	test(function(name,addr){ alert(name + ", " + addr) });
+}
+
+window.onload=function(){// 무기명 함수
+	alert("안녕");
+}
+
+</script>
+</head>
+<body>
+<input type="button" value = "click" class = "btnBorder" onclick='test2()'/>
+</body>
+</html>

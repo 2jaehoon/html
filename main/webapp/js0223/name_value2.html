@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css"  href="http://localhost/html_prj/common/main_v20230217.css"/>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+function getNameValue(){
+	// name 속성을 사용하여 html form control에 입력된 값 받기
+	var obj = document.frm;
+	//alert(obj);
+	var output = "";
+	var name = obj.name.value;
+	var age = obj.age.value;
+	var addr = obj.addr.value;
+	var file = obj.file.value;
+	// var img = obj.img.value; 이미지는 src속성으로 이미지의 경로를 얻는다.
+	 var img = obj.img.src;
+	 var domain = obj.domain.value;//select
+	 var chk = obj.save.value; //checkbox는 벨류 속성이 없을 때 벨류를 가져오면 온이 들어오고
+	 //벨류가 있으면 벨류 값이 들어온다.
+	 var ta = obj.ta.value;
+	
+	output += "text : " + name + "\n";
+	output += "password : " + age + "\n";
+	output += "hidden : " + addr + "\n";
+	output += "file : " + file + "\n";
+	output += "img : " + img + "\n";
+	output += "select : " + domain + "\n";
+	output += "checkbox : " + chk + "\n";
+	output += "textarea : " + ta + "\n";
+	
+	
+	
+	alert( output );
+	
+	
+	
+}//getNameValue
+
+</script>
+</head>
+<body>
+<form action="" name="frm">
+<h2>name속성이 유일한  HTML Form Control의 값 얻기</h2>
+<label>이름</label>
+<input type="text" name="name" class="inputBox"/><br/>
+<label>나이</label>
+<input type="password" name="age" class="inputBox"/><br/>
+<label>주소</label>
+<input type="hidden" name="addr" value="서울시 강남구 역삼동 한독빌딩"/><br/>
+<label>파일</label>
+<input type="file" name="file" /><br/>
+<label>이미지</label><!-- img 태그는 src속성으로 이미지를 설정한다.  -->
+<img src="http://localhost/html_prj/common/images/tae.png" name="img"/><br>
+<label>메일 도메인</label>
+<select name="domain">
+<option value="daum.net">다음</option>
+<option value="gmail.com">지메일</option>
+<option value="naver.com">네이버</option>
+<option value="hotmail.com">핫메일</option>
+</select>
+<br/>
+<input type="checkbox" name="save" >저장
+<br/>
+<label>textarea</label>
+<textarea rows="5" cols="50" name="ta"></textarea>
+<br/>
+<input type="button" value="값 얻기" class="inputBox" onclick="getNameValue()" /><br/>
+
+</form>
+
+</body>
+</html>

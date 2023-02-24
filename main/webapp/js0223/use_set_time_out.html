@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css">
+#div{border:1px solid #333; font-size: 20px; font-weight: bold; font-family: 돋움체; width: 300px; height: 200px}
+</style>
+<script type="text/javascript">
+function useTime(){
+	var date = new Date();
+	
+	var output = date.getFullYear() + "-" + (date.getMonth() +1) + "-" + date.getDate()
+ + " " + date.getHours()  + ":" + date.getMinutes()+ ":" + date.getSeconds();
+ 
+ document.getElementById("div").innerHTML=output;
+ setTimeout(useTime, 1000);//함수를 매개 변수를 넣을 수 있는 이유 : first class funtion이기 때문에 가능하다.
+ }//1초마다 한번씩 useTime함수를 호출
+ 
+
+</script>
+</head>
+<body>
+<div id = "div"></div>
+<input type = "button" value = "시간 얻기" class = "btnBorder" onclick="useTime()"/>
+</body>
+</html>

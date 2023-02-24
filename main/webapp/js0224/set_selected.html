@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+function setSel( flag ){
+	document.frm.sel[flag].selected = true;
+}
+
+function setGender(){
+	var obj = document.frm;
+
+	/* if( obj.gender.value == "M" ){
+		obj.genderSel[1].selected = true;
+	}else if( obj.gender.value == "F" ){
+		obj.genderSel[2].selected = true;
+	} */
+	
+	/* if( obj.gender[0].checked ){
+		obj.genderSel[1].selected = true;
+	}else if( obj.gender[1].checked ){
+		obj.genderSel[2].selected = true;
+	} */
+	
+	var flag = -1;
+	if( !( obj.gender[0].checked || obj.gender[1].checked ) ){
+		alert( "성별을 선택해주세요" );
+		return;
+	}//end if
+	
+	flag = obj.gender[0].checked?1:2;
+	
+	obj.genderSel[flag].selected = true;
+	
+}//setGender
+
+</script>
+</head>
+<body>
+<form action = "" name = "frm">
+<select name = "sel">
+<option value = "none">선택</option>
+<option value = "자바">자바</option>
+<option value = "html">html</option>
+<option value = "css">css</option>
+<option value = "javascript">javascript</option>
+<option value = "jsp">jsp</option>
+</select>
+<input type = "button" value = "자바 선택" class = "btnBorder" onclick = "setSel( 1 )"/>
+<input type = "button" value = "자바 선택" class = "btnBorder" onclick = "setSel( 3 )"/><br/>
+
+<input type = "radio" value = "M"  name = "gender"/>남자
+<input type = "radio" value = "F"  name = "gender"/>여자
+<input type = "button" value = "선택" class = "btnBorder" onclick = "setGender()"/><br/>
+<select name = "genderSel">
+<option value = "none">--선택--</option>
+<option value = "남자">남자</option>
+<option value = "여자">여자</option>
+</select>
+</form>
+
+</body>
+</html>

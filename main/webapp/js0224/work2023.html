@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+
+<style type="text/css">
+</style>
+
+<script type="text/javascript">
+	var arr = new Array();
+	
+	function validSsn( ssn ){
+		
+		//배열에 각 숫자 담기
+
+		for (var i = 0; i < 13; i++) {
+
+			arr[i] = ssn.charAt(i);
+
+		}
+
+		var sum = 0;
+		var i = 0;
+		var j = 2;
+
+		for (var i = 0; i < 12; i++) { //유효성 검증 계산
+			sum += arr[i] * j;  // 각 자리에 2,3,4,5,6,7,8,9,2,3,4,5 가 곱해진 후 더하기 연산
+			j++;
+
+			if (j > 9) {
+				j = 2;
+				continue;
+			}//end if
+		}//for end	
+
+		//12자리의 곱한 값의 합
+		//var sum1 = sum % 11;
+		//var sum2 = 11 - sum1;
+		//var sum3 = sum2 % 10;
+
+		var sum1=(11-(sum % 11))%10;
+		
+		//마지막 자리와 비교하여 무효/유효 출력
+		var isValid = "무효";
+
+		if (sum1 == arr[12]) {
+			isValid = "유효";
+		}//end if
+
+		return isValid;
+	}//
+	
+	function chkNull(name , ssn1, ssn2){
+	 var flag=false;
+		//입력값 유효성 확인
+		if (name == "") {
+			alert( "이름 필수 입력");
+			document.frm.name.focus();
+			flag = true;
+			return flag;
+		} 
+		
+		if (ssn1==""){
+			alert("주민번호 앞자리 필수 입력");
+			document.frm.ssn1.focus();
+			flag=true;
+			return flag;
+		} 
+		if (ssn2 =="") {
+			alert("주민번호 뒷자리 필수 입력");
+			document.frm.ssn2.focus();
+			flag = true;
+			return flag;
+		} 
+		if (isNaN(ssn1) || isNaN(ssn2)) { //is Not a Number
+			alert("주민번호는 숫자로만 입력");
+			flag = true;
+			return flag;
+		} 
+		
+		
+		if ( (ssn1+ssn2).length != 13) {
+			alert( "주민번호는 13자리로 입력");
+			flag = true;
+			return flag;
+		}
+		
+		return flag;
+	}//chkNull
+	
+	function birth( genNum, year){
+		
+		//주민번호 뒷자리가 조건과 같을 때 year에 값 더해서 구하기
+		if (genNum == 1 || genNum == 2 || genNum == 5 || genNum == 6) {
+			year += 1900;
+		} else if (genNum == 3 || genNum == 4 || genNum == 7 || genNum == 8) {
+			year += 2000;
+		} else {
+			year += 1800;
+		}
+		return year;
+		
+	}
+	
+	function genderText( genNum ){
+		var gender ="여";
+		if (genNum % 2 != 0) {
+			gender = "남";
+		}//end if
+		return gender;		
+	}//genderText 
+	
+	function nationText(genNum){
+		var nation="내국인";
+		if (genNum > 4 && genNum < 8) {
+			nation = "외국인";
+		}//  end if
+		return nation;
+	}//nationText
+	
+	function zodiacText( year ){
+		var zodiacArr=["원숭이","닭","개","돼지", "쥐","소","호랑이","토끼", "용","뱀","말","양"];
+		return zodiacArr[ year%12 ];		
+	}//zodiacText
+	
+	function getValue() {
+
+		//name 속성으로 form control 접근
+		var obj = document.frm;
+
+		var name = obj.name.value;
+		var ssn1 = obj.ssn1.value;
+		var ssn2 = obj.ssn2.value;
+
+		var msg = "";
+		var flag = chkNull(name, ssn1, ssn2);
+
+		//flag가 true일 때(입력값이 유효하지 않을 때)
+		if (flag) {
+			return;
+		}//end if
+
+		//주민번호 13자리로 합치기
+		var ssnTotal = ssn1 + "" + ssn2;
+		var isValid=validSsn( ssnTotal );
+		
+		
+		var output = "";
+		output = name + "님<br>주민번호: " + ssn1 + "-" + ssn2
+				+ "<br>주민번호 유효성 검증 결과: " + isValid + "<br>";
+
+				
+		//무효하면 위의 정보만 div에 출력		
+		if (isValid == "무효") {
+			document.getElementById("div").innerHTML = output;
+		} else { //유효하면 추가로 더 구해야함
+			
+			
+			//주민번호 뒷자리 첫숫자
+			var genNum = parseInt(ssn2.charAt(0));
+		
+			//태어난 연도 구하기 95
+			var year = parseInt(arr[0] + "" + arr[1]);
+
+			year=birth( genNum, year );
+			
+
+			//생년월일 구하기 - 주민번호 앞번호의 부분 0525
+			var bthday = ssn1.substring(2, 4) + "월 " + ssn1.substring(4) + "일";
+			
+			//성별 구하기
+			var gender =genderText(genNum);
+
+			//내국인,외국인 구하기
+			var nation = nationText( genNum );
+			
+
+			
+			//띠 구하기
+			var myZodiac = "";
+			var zodiac = zodiacText( year );
+
+			
+			//모두 모아서 div로 출력
+			output += "태어난 해: " + year + "년<br>생년월일: " + bthday + "<br>성별: "
+					+ gender + "<br>국적: " + nation + "<br>띠: " + zodiac;
+
+			document.getElementById("div").innerHTML = output;
+
+
+
+		}//else end
+
+	}//getValue
+</script>
+
+</head>
+<body>
+
+	<form action="" name="frm">
+
+	<label>이름</label>
+	<input type="text" class="inputBox" name="name"	value="김규미" /><br>
+	<label>주민번호</label> 
+	<input type="text"	class="inputBox" name="ssn1" value="121212" /> - 
+	<input type="password" class="inputBox" name="ssn2" value="1234567" /><br>
+	<input type="button" class="btnBorder" value="입력" onclick="getValue()" /><br>
+
+	</form>
+
+	<div id="div"></div>
+
+
+
+</body>
+</html>
