@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css"  href="http://localhost/html_prj/common/main_v20230217.css"/>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+function useJson(){
+//JSONObject 사용. ( JSON - JavaScript Object Notation)
+//1.JSONObject형태의 문자열사용. "{ 이름:값, , , ,,}"
+var data="{name:'윤상준',age:20}";
+
+alert( typeof( data ));
+var jsonObj=eval("("+ data +")"); // eval함수를 사용하면 입력된 문자열이 객체로 생성
+alert( typeof( jsonObj ));
+//2. 사용. parsing : json객체명.이름
+alert( jsonObj.name+" / "+ jsonObj.age );
+
+var json={name:"박진호", age:25, addr:function(){ return "서울시 강남구 역삼동";} };
+alert(typeof( json ));
+
+var obj=document.frm;
+//JSONObject의 값을 parsing하여 HTML Form Control에 설정
+obj.name.value=json.name;
+obj.age.value=json.age;
+//함수명만 사용하면 함수의 내용이 문자열로 출력된다.
+//함수명() 를 사용하면 함수가 호출되어 일을 한다. 
+obj.addr.value=json.addr; //함수의 내용이 문자열
+obj.addr1.value=json.addr();//함수가 호출된다.
+
+//값추가 : 생성된 JSONObject에 값 추가  jsonObject명.이름=값
+json.height=182.3;
+alert(json.height)
+
+//JSONObject의 값 삭제
+//이름 삭제 : delete json객체명.이름
+delete json.name;
+alert(" 삭제 후 이름 " +  json.name);
+
+
+}//useJson
+</script>
+</head>
+<body>
+<input type="button"  value="JSONObject" class="btnBorder" onclick="useJson()"/>
+<form name="frm">
+<input type="text" name="name" class="inputBox"/><br/>
+<input type="text" name="age" class="inputBox"/><br/>
+<input type="text" name="addr" class="inputBox"/><br/>
+<input type="text" name="addr1" class="inputBox"/><br/>
+</form>
+</body>
+</html>

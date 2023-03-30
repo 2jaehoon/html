@@ -1,0 +1,445 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인</title>
+<style type="text/css">
+
+#container.bg_type01 {
+    background-color: #f6f6f6;
+    padding-bottom: 130px;
+}
+input {
+    vertical-align: middle;
+    font-family: font_ns, sans-serif;
+    outline: none;
+}
+
+#content {
+    padding-top: 0;
+    position: relative;
+    z-index: 3;
+}
+
+.signin_wrapper {
+    margin: 20px auto 0;
+    width: 650px;
+    background-color: #fff;
+    padding: 86px 100px 60px;
+    box-sizing: border-box;
+    border-radius: 30px 0;
+}
+#container {
+    margin-top: 170px;
+    position: relative;
+}
+
+.signin_wrapper h2 {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 300;
+    color: #292929;
+    text-align: center;
+    letter-spacing: -0.07em;
+}
+
+.signin_wrapper p {
+    color: #999;
+    text-align: center;
+    letter-spacing: -0.05em;
+    line-height: 26px;
+    margin-top: 22px;
+}
+
+.signin_wrapper .signin_input {
+    margin-top: 46px;
+}
+
+
+.form_text input {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    height: 45px;
+    color: #292929;
+    font-size: 16px;
+    text-indent: 15px;
+}
+
+.write_info_wrap .input_set {
+    overflow: hidden;
+    position: relative;
+}
+
+.write_info_wrap .input_set dt {
+    float: left;
+    position: relative;
+    font-weight: 300;
+    width: 100px;
+    line-height: 35px;
+    letter-spacing: -0.05em;
+}
+
+html, body, button, dl, dt, dd, div, form, fieldset, legend, h1, h2, h3, h4, h5, h6, input, select, textarea, ul, ol, li, p, pre, table, td, th, caption, a, button, figure {
+    margin: 0;
+    padding: 0;
+    line-height: 120%;
+}
+
+.btn span {
+    display: inline-block;
+    vertical-align: middle;
+    height: 46px;
+    line-height: 46px;
+}
+
+.write_info_wrap .input_set dl {
+    background-color: #fff;
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+    padding: 22px 30px;
+}
+
+.signin_wrapper .signin_input dl dd {
+    width: 268px;
+}
+
+
+
+.btn.bgc_point {
+    background-color: #009223;
+    color: #fff;
+}
+
+.write_info_wrap .input_set dt {
+    float: left;
+    position: relative;
+    font-weight: 300;
+    width: 120px;
+    line-height: 35px;
+    letter-spacing: -0.05em;
+}
+
+.signin_wrapper .signin_btn .btn {
+    border-radius: 0;
+    width: 100% !important;
+}
+.signin_wrapper .signin_btn {
+    margin-top: 40px;
+}
+
+.write_info_wrap .input_set dd .form_text {
+    background-color: #fff;
+    width: 100%;
+}
+
+.signin_wrapper .signin_input {
+    margin-top: 46px;
+}
+
+.signin_wrapper .signin_input .form_checkbox {
+    font-weight: 300;
+    color: #666;
+    margin-top: 10px;
+}
+
+.form_checkbox .icon {
+    width: 26px;
+    height: 26px;
+    border: 2px solid #dddddd;
+    border-radius: 50px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    margin-right: 10px;
+}
+.form_box {
+    overflow: hidden;
+}
+
+.signin_wrapper {
+    margin: 20px auto 0;
+    width: 650px;
+    background-color: #fff;
+    padding: 86px 100px 60px;
+    box-sizing: border-box;
+    border-radius: 30px 0;
+}
+a {
+    cursor: pointer;
+}
+
+.signin_wrapper .signin_link ul {
+    padding: 0 18px;
+    width: 100%;
+    box-sizing: border-box;
+    display: table;
+}
+
+.signin_wrapper .signin_link li {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+}
+.signin_wrapper {
+    margin: 20px auto 0;
+    width: 650px;
+    background-color: #fff;
+    padding: 86px 100px 60px;
+    box-sizing: border-box;
+    border-radius: 30px 0;
+}
+
+
+
+
+.signin_wrapper .signin_link {
+    margin-top: 30px;
+}
+
+.form_checkbox .icon:before {
+    content: '';
+    width: 0;
+    height: 20px;
+    background: url(http://localhost/html_prj/project/login/icon_checkbox.png) 0 0 no-repeat;
+    position: absolute;
+    left: 4px;
+    top: 0;
+    transition-duration: 0.2s;
+}
+
+.form_checkbox input[type="checkbox"]:checked+.icon:before {
+    width: 24px;
+}
+
+
+
+
+</style>
+<link rel="stylesheet" type="text/css"
+	href="http://localhost/html_prj/project/css/common/ui.common.css">
+<link rel="stylesheet" type="text/css"
+	href="http://localhost/html_prj/project/css/common/jquery.mCustomScrollbar.min.css" />
+<script type="text/javascript"
+	src="http://localhost/html_prj/project/js/common/jquery-1.12.4.min.js"></script>
+<script type="text/javascript"
+	src="http://localhost/html_prj/project/js/common/jquery-ui-1.12.0.min.js"></script>
+<script type="text/javascript"
+	src="http://localhost/html_prj/project/js/common/jquery.easing.1.3.min.js"></script>
+<script type="text/javascript"
+	src="http://localhost/html_prj/project/js/common/jquery.bxslider.min.js"></script>
+<script type="text/javascript"
+	src="http://localhost/html_prj/project/js/common/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript"
+	src="http://localhost/html_prj/project/js/common/jquery.blockUI.min.js"></script>
+<script type="text/javascript"
+	src="http://localhost/html_prj/project/js/common/TweenMax.min.js"></script>
+<script type="text/javascript"
+	src="http://localhost/html_prj/project/js/common/jquery.cookie.js"></script>
+<script type="text/javascript"
+	src="http://localhost/html_prj/project/js/common/ui.common.js"></script>
+<script type="text/javascript"
+	src="http://localhost/html_prj/project/js/common/subway.common.js"></script>
+<script type="text/javascript"
+	src="http://localhost/html_prj/project/js/common/jsrender.js"></script>
+<script type="text/javascript"
+	src="http://localhost/html_prj/project/js/common/jquery.tmpl.min.js"></script>
+<script type="text/javascript"
+	src="http://localhost/html_prj/project/js/common/waffle.utils.js"></script>
+	
+
+
+<script type="text/javascript">
+	
+</script>
+
+</head>
+<body>
+
+
+
+
+	<div id="wrap">
+		<!-- inc header s -->
+		<div id="header">
+			<script>
+				/*<![CDATA[*/
+				var memberVO = false;
+				/*]]*/
+			</script>
+			  <div class="content">
+        <h1 class="logo"><a href="http://localhost/html_prj/project/%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.jsp">JaeGun's Sandwich</a></h1>
+        <!-- gnb -->
+         <nav id="gnb">
+            <ul>
+                <li>
+                    <a class="dp1" href="#none">메뉴소개</a>
+                    <div class="dp2">
+                        <ul>
+                            <li>
+                                <a href="http://localhost/html_prj/project/%EB%A9%94%EB%89%B4%EC%86%8C%EA%B0%9C.jsp">샌드위치</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            
+                <li>
+                    <a href="#none" class="dp1">재건쓰</a>
+                    <div class="dp2">
+                        <ul>
+                            <li><a href="http://localhost/html_prj/project/menu_promise.jsp">재건쓰 약속</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" class="dp1">가맹점</a>
+                    <div class="dp2">
+                        <ul>
+                            <li><a href="http://localhost/html_prj/project/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88.jsp">재건쓰 프랜차이즈</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="dp1" href="javascript:void(0);">온라인 주문</a>
+                    <div class="dp2">
+                        <ul>
+                            <li><a href="http://localhost/html_prj/project/fast_sub_step1.jsp">FAST-SUB</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!--// gnb -->
+
+        <!-- util menu -->
+        <div class="util_menu">
+            <ul>
+                
+                    <li class="before_sign"><a href="http://localhost/html_prj/project/login.jsp">로그인</a></li>
+                    <li class="before_sign"><a href="http://localhost/html_prj/project/step_agree.jsp">회원가입</a></li>
+
+
+						<li class="icon_menu global_subway"><a
+							href="http://www.subway.com/en-us/exploreourworld"
+							target="_blank" title="Global Subway"><span class="blind">Global
+									Subway</span></a></li>
+					</ul>
+				</div>
+				<!--// util menu -->
+			</div>
+		</div>
+	</div>
+    <!--// inc header e -->
+
+
+
+        <!-- util menu -->
+        <div class="util_menu">
+            <ul>
+                
+                    <li class="before_sign"><a href="/member/login">로그인</a></li>
+                    <li class="before_sign"><a href="/member/join/step1">회원가입</a></li>
+                
+                
+                <li class="icon_menu global_subway">
+                    <a href="http://www.subway.com/en-us/exploreourworld" target="_blank" title="Global Subway"><span class="blind">Global Subway</span></a>
+                </li>
+            </ul>
+        </div>
+        <!--// util menu -->
+    </div>
+</div>
+            <!--// inc header e -->
+
+
+            <!-- container s -->
+            <div class="bg_type01" id="container">
+			<input id="returnUrl" name="returnUrl" type="hidden" value="/" />
+			<input id="dormantCloseYn" name="dormantCloseYn" type="hidden" value="N" />
+
+			<!-- sub content s -->
+			<div id="content">
+				<!-- 로그인 -->
+				<div class="signin_wrapper">
+					<div class="signin_tit">
+						<h2>LOGIN</h2>
+						<p>재건's 샌드위치 회원으로 로그인하시면 제공하는<br />다양한 서비스를 이용할 수 있습니다.</p>
+					</div>
+					<div class="signin_input">
+						<div class="form_box">
+							<div class="write_info_wrap">
+								<div class="input_set">
+									<dl>
+										<dt>이메일 아이디</dt>
+										<dd>
+											<span class="form_text">
+												<input class="required-value" id="username" name="username" placeholder="이메일 아이디 입력" type="text" value="" />
+											</span>
+										</dd>
+										<dt>비밀번호</dt>
+										<dd>
+											<span class="form_text">
+												<input class="required-value" id="password" name="password" placeholder="비밀번호 입력" type="password" />
+											</span>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<label class="form_checkbox">
+								<input id="rememberId" name="rememberId" type="checkbox" />
+								<span class="icon"></span>이메일 아이디 저장
+							</label>
+						</div>
+					</div>
+					<div class="signin_btn">
+						<a class="btn bgc_point on" href="http://localhost/html_prj/project/%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B42.jsp" id="loginBtn" style="width:370px;"><span>로그인</span></a>
+						<!-- <a class="btn bgc_point on" href="javascript:void(0);" id="loginBtn" style="width:370px;"><span>로그인</span></a> -->
+
+						<a href="/member/dormant/noti" id="popDormantNoti">
+						</a><a href="/member/dormant/closing" id="popDormantClosing">
+						</a><a href="/member/agr/status/noti" id="popMemberAgrNoti">
+					</a></div>
+					<div class="signin_link">
+						<ul>
+							<li><a href="http://localhost/html_prj/project/find_Id.jsp#none" id="findIdBtn">아이디 찾기</a></li>
+							<!-- <li><a href="javascript:void(0);" id="findPwBtn">비밀번호 찾기</a></li> -->
+							<li><a href="http://localhost/html_prj/project/find_pw.jsp" id="findPwBtn">비밀번호 찾기</a></li>
+							<li><a href="http://localhost/html_prj/project/step_agree.jsp">회원가입</a></li>
+						</ul>
+					</div>
+				</div>	
+				<!--// 로그인 -->
+			</div>
+			<!--// sub content e -->
+		</div>
+
+
+
+           <!-- footer -->
+	<div id="footer">
+		<div class="content">
+			<!-- util menu -->
+			<div class="util_menu">
+				<ul>
+					<li><a href="http://localhost/html_prj/project/manager/login.jsp" target="_blank">관리자</a></li>
+				</ul>
+			</div>
+			<!--// util menu -->
+
+			<span class="addr">서울 강남구 테헤란로 132(역삼동) 한독약품 빌딩 8층
+				02-3482-4632~5</span> <span class="rep">대표 : JAEGEON LEE(재건이)</span> <span
+				class="tel">전화 : 01-234-5678</span> <span class="rep">사업자등록번호
+				: 123-45-67890</span>
+			<p class="copyright">JAEGUN`S SANDWICH® is a Registered Trademark
+				of Subway IP LLC. © 2021 JAEGUN`S SANDWICH IP LLC. All Rights
+				Reserved.</p>
+		</div>
+	</div>
+	<!--// inc footer e -->
+    
+
+</body></html>

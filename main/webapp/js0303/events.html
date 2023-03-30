@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css"  href="http://localhost/html_prj/common/main_v20230217.css"/>
+<style type="text/css">
+
+</style>
+<!-- jQuery CDN설정 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#btn").click(function(){
+		alert("버튼 클릭!!!");
+	});//click
+	
+	$("#chg").change(function() {
+		alert("change")	
+	});//change
+	
+	$("#in").focusin(function() {
+		$("#output").html("커서가 들어왔음");
+	});
+	$("#out").focusout(function() {
+		$("#output").html("커서가 빠져 나갔음.");
+	});
+});//ready
+</script>
+</head>
+<body>
+<input type="button" value="클릭" id="btn" class="btnBorder"/><br/>
+<select id="chg">
+<option value="A">--A--</option>
+<option value="B">--B--</option>
+<option value="C">--C--</option>
+</select>
+<br/>
+<input type="text" value="커서가 들어오면" id="in" class="btnBorder"/>
+<input type="text" value="커서가 빠져나가면" id="out" class="btnBorder"/>
+<div id="output"></div>
+</body>
+</html>

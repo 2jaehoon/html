@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+window.onload= function(){
+	document.getElementById("loc_add").addEventListener("click", addValue);
+	document.getElementById("loc_get").addEventListener("click", getValue);
+	document.getElementById("loc_remove").addEventListener("click", removeValue);
+	document.getElementById("loc_clear").addEventListener("click", clearlocal);
+}
+
+function clearlocal(){
+	//1. 스토리지 얻기
+	//window 객체 생략 가능
+	var ls = window.localStorage;
+	//2. 스토리지의 저장된 모든 값을 삭제
+	ls.clear();
+	
+}
+
+function removeValue(){
+	//1. 스토리지 얻기
+	//window 객체 생략 가능
+	var ls = window.localStorage;
+	//2. 삭제
+	ls.removeItem("loc_name");
+}
+
+function getValue(){
+	//1. 스토리지 얻기
+	var ls = window.localStorage;
+	//2 값 얻기
+	var output = "";
+	output += "이름 : " + ls.getItem("loc_name") + "<br>";
+	output += "나이 : " + ls.getItem("loc_age") + "<br>";
+	
+	document.getElementById("output").innerHTML = output;
+}
+
+
+function addValue(){
+	
+	//1. 스토리지 얻기
+	//localStrorage는 접속자가 접속했을 때에만 값이 유지
+	var ls = window.localStorage;
+	//alert( ls );
+	//2. 값 설정
+	ls.setItem("loc_name", "이재훈");
+	ls.setItem("loc_age", 24);
+}
+</script>
+</head>
+<body>
+<input type = "button" value = "로컬스토리지값 설정"  id = "loc_add"class = "btnBorder"/>
+<input type = "button" value = "로컬스토리지값 얻기"   id = "loc_get" class = "btnBorder"/>
+<input type = "button" value = "로컬스토리지값 삭제"  id = "loc_remove" class = "btnBorder"/>
+<input type = "button" value = "로컬스토리지값 모두삭제"  id = "loc_clear" class = "btnBorder"/>
+<div id = "output"></div>
+</body>
+</html>

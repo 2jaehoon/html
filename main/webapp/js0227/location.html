@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+window.onload = function(){
+	//주의 : 함수에 이름만 넣는다. 그렇지 않고 함수 기호를 같이 사용하면 바로 호출된다. document.getElementById("url").addEventListener( "change", moveSite() );//바로 호출
+	document.getElementById("url").addEventListener("change", moveSite);//동작에 의한 호출
+}
+
+function moveSite(){
+	//var selectBtn = confirm("컴펌 다이얼로그");
+	//alert( selectBtn );
+	var obj = document.frm;
+	if( obj.url.selectedIndex != 0 ){
+		var url = obj.url.value;
+		
+		if( confirm( url + "로 이동하시겠습니까?" ) ){
+			//window.location.href = "이동할 url"//protocol부터 입력
+			//window 생략 가능
+			//location.href는 <a> 태그와 같다. ( history가 남아 뒤로, 앞으로의 이동이 된다. )
+			//window.location.href = "http://" + url;
+			
+			//replace 함수를 사용하면 url을 치환하기 때문에 뒤로가기를 할 수 없다.
+			location.replace( "http://" + url );
+			
+		}//end if
+		else{
+			alert("no");
+		}
+	}
+}
+
+</script>
+</head>
+<body>
+<form name = "frm">
+<select name = "url" id = "url">
+<option value = "none">---이동할 url 선택---</option>
+<option value = "daum.net">다음</option>
+<option value = "naver.com">네이버</option>
+<option value = "google.com">구글</option>
+<option value = "sist.co.kr">쌍용교육센터</option>
+</select>
+</form>
+</body>
+</html>

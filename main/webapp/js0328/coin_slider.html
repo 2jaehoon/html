@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css"  href="http://localhost/html_prj/common/main_v20230217.css"/>
+<style type="text/css">
+
+</style>
+<!-- jQuery CDN 시작-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- jQuery CDN 끝-->
+<!-- coin slider start -->
+<script type="text/javascript" src="http://localhost/html_prj/common/js/coin/coin-slider.min.js"></script>
+<link rel="stylesheet" href="http://localhost/html_prj/common/js/coin/coin-slider-styles.css" type="text/css" />
+<!-- coin slider end -->
+<script>
+	$(function(){
+	$('#coin-slider').coinslider({ width: 1208, height: 487, navigation: false, delay: 500 }); //jsonobject 로 중괄호하나에 값을 받는다.
+	});//ready
+</script>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+<div id='coin-slider'>
+    <a href="#void" target="_blank">
+        <img src='images/night_1.png' >
+        <span>
+            여의도에서 바라본 아버지는 양화대교~
+        </span>
+    </a>
+    
+     <a href="#void" target="_blank">
+        <img src='images/night_2.png' >
+        <span>
+            서울시 청계천 등행사에서 출사 야경
+        </span>
+    </a>
+    
+     <a href="#void" target="_blank">
+        <img src='images/night_3.png' >
+        <span>
+            마계인천시 부평동
+        </span>
+    </a>
+    
+     <a href="#void" target="_blank">
+        <img src='images/night_4.png' >
+        <span>
+            맑은 날 저녁의 인천대교
+        </span>
+    </a>
+</div>
+</body>
+</html>

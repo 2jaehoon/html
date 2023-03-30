@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+window.onload = function(){
+	document.getElementById("btnBack").addEventListener("click", histBack);
+	document.getElementById("btnGo").addEventListener("click", histGo);
+	document.getElementById("btnGo2").addEventListener("click", histGo2);
+	document.getElementById("btnGo3").addEventListener("click", histGo3);
+}
+
+function histLen(){
+	alert( "히스토리 수 : " + window.history.length );
+}
+
+function histBack(){
+	history.back();
+}
+
+function histGo(){
+	history.go(1);
+}
+
+function histGo2(){
+	history.go(2);
+}
+
+function histGo3(){
+	history.go(-1);
+}
+</script>
+</head>
+<body>
+<input type = "button" value = "히스토리 수" onclick="histLen()" class = "btnBorder"/>
+<input type = "button" id = "btnBack" value = "뒤로 " class = "btnBorder"/>
+<input type = "button"  id = "btnGo"  value = "앞으로 " class = "btnBorder"/>
+<input type = "button"  id = "btnGo2"  value = "앞으로2 " class = "btnBorder"/>
+<input type = "button" id = "btnGo3" value = "뒤로 " class = "btnBorder"/>
+</body>
+</html>

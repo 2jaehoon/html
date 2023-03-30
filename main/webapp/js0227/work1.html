@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+#div{
+border:1px solid #333;
+width:500px; height:150px;
+text-align:center;
+padding-top:10px;
+
+}
+
+</style>
+
+<script type="text/javascript">
+
+	
+function randomPick(){
+	return parseInt((Math.random()*5))+1; // 1~6 사이 난수
+}	
+	
+	
+var num1, num2;	
+function setDices(){
+	
+	obj = document.frm;	
+	route = "http://211.63.89.133/html_prj/js0224/images/dice_";
+	
+	num1=randomPick();
+	num2=randomPick();
+	
+	obj.dice1.src=route+num1+".png";
+	obj.dice2.src=route+num2+".png";
+		
+}//setDices
+
+function addDices(){
+	setDices();
+	obj.addedVal.value=num1+num2; 
+}
+
+
+</script>
+
+
+</head>
+<body onload="setDices()">
+
+
+<form action="" name="frm">
+<input type="button" class="btnBorder" value="던지기" onclick="addDices()"/>
+<div id="div">
+<img name="dice1">
+<img name="dice2">
+</div>
+<label>결과</label>
+<input type="text" class="inputBox" name="addedVal"/>
+</form>
+
+
+
+
+</body>
+</html>

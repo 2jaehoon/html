@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css"  href="http://localhost/html_prj/common/main_v20230217.css"/>
+<style type="text/css">
+#show{ display: none }
+</style>
+<!-- jQuery CDN 시작-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- jQuery CDN 끝-->
+<script type="text/javascript">
+$(function(){
+	$("#btnShow").click(function(){
+		$("#show").show();
+	});
+	$("#btnHide").click(function(){
+		$("#hide").hide();
+	});
+	$("#btnToggle").click(function(){
+		$("#toggle").toggle();
+	});
+});//ready
+</script>
+</head>
+<body>
+<label>보이기</label>
+<img src="http://localhost/html_prj/common/images/tae.png" id="show" title="보이기">
+<br/>
+<label>숨기기</label>
+<img src="http://localhost/html_prj/common/images/tae.png" id="hide" title="숨기기">
+<br/>
+<label>토글 </label>
+<img src="http://localhost/html_prj/common/images/tae.png" id="toggle" title="토글">
+<br/>
+<input type="button" id="btnShow" value="보이기" class="btnBorder"/>
+<input type="button" id="btnHide" value="숨기기" class="btnBorder"/>
+<input type="button" id="btnToggle" value="반전" class="btnBorder"/>
+</body>
+</html>

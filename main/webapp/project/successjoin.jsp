@@ -1,0 +1,194 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가입완료</title>
+<style type="text/css">
+
+</style>
+		<link rel="stylesheet" type="text/css" href="http://localhost/html_prj/project/css/common/ui.common.css"/>
+		<link rel="stylesheet" type="text/css" href="http://localhost/html_prj/project/css/common/jquery.mCustomScrollbar.min.css" />   
+		  
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery-ui-1.12.0.min.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery.easing.1.3.min.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery.bxslider.min.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery.blockUI.min.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/TweenMax.min.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery.cookie.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/ui.common.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/subway.common.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/jsrender.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery.tmpl.min.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/waffle.utils.js"> </script>
+
+<script type="text/javascript">
+</script>
+
+</head>
+
+	<link rel="stylesheet" type="text/css" href="http://localhost/html_prj/project/css/sucessjoin/ui.member.css?v=2022122101" />
+	<script type="text/javascript" src="http://localhost/html_prj/project/js/sucessjoin/auth.js?v=2022122101"></script>
+	<script type="text/javascript" src="http://localhost/html_prj/project/js/sucessjoin/signin.js?v=2022122101"></script>
+	<script>
+		  $(document).ready(function() {
+				writeOn(); //input focus
+				agress_scrollbar();	
+		  });
+	</script>
+	<link rel="stylesheet" type="text/css" href="http://localhost/html_prj/project/css/sucessjoin/ui.joining.css?v=2022122101">
+
+
+
+<body>
+
+
+<div id="wrap">
+<!-- inc header s -->
+<div id="header">
+    <script>
+        /*<![CDATA[*/
+        var memberVO = false;
+        /*]]*/
+    </script>
+    <div class="content">
+        <h1 class="logo"><a href="http://localhost/html_prj/project/%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.jsp">JaeGun's Sandwich</a></h1>
+        <!-- gnb -->
+        <nav id="gnb">
+            <ul>
+                <li>
+                    <a class="dp1" href="#none">메뉴소개</a>
+                    <div class="dp2">
+                        <ul>
+                            <li>
+                                <a href="http://localhost/html_prj/project/%EB%A9%94%EB%89%B4%EC%86%8C%EA%B0%9C.jsp">샌드위치</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            
+                <li>
+                    <a href="#none" class="dp1">재건쓰</a>
+                    <div class="dp2">
+                        <ul>
+                            <li><a href="http://localhost/html_prj/project/menu_promise.jsp">재건쓰 약속</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" class="dp1">가맹점</a>
+                    <div class="dp2">
+                        <ul>
+                            <li><a href="http://localhost/html_prj/project/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88.jsp">재건쓰 프랜차이즈</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="dp1" href="javascript:void(0);">온라인 주문</a>
+                    <div class="dp2">
+                        <ul>
+                            <li><a href="#none">FAST-SUB</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!--// gnb -->
+
+        <!-- util menu -->
+        <div class="util_menu">
+            <ul>
+                
+                    <li class="before_sign"><a href="http://localhost/html_prj/project/%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B42.jsp">로그인</a></li>
+                    <!-- <li class="before_sign"><a href="/member/join/step1">회원가입</a></li> --> <!-- 기존코드 -->
+                    <li class="before_sign"><a href="http://localhost/html_prj/project/step_agree.jsp">회원가입</a></li> <!-- hcy 링크 -->
+                
+                
+                <li class="icon_menu global_subway">
+                    <a href="http://www.subway.com/en-us/exploreourworld" target="_blank" title="Global Subway"><span class="blind">Global Subway</span></a>
+                </li>
+            </ul>
+        </div>
+        <!--// util menu -->
+    </div>
+</div>
+</div>
+<!--// inc header e -->
+            
+            
+ <!-- container s -->
+ <div class="bg_type01" id="container">
+		<!-- sub content -->
+		<div id="content">
+			<!-- 멤버십가입 -->
+			<div class="joining_wrapper">
+				<h2 class="subTitle_02">회원가입</h2>
+				<!-- join step -->
+				<div class="join_step">
+					<ul>
+						<li class="step01"><span class="blind">약관동의</span></li> <!-- 현재 step에 class="curr" 추가 -->
+						<li class="step03"><span class="blind">정보입력</span></li>
+						<li class="step04 curr"><span class="blind">가입완료</span></li>
+					</ul>
+				</div>
+				<!--// join step -->
+
+				<h3 class="step_tit"><span>Step4.</span> 가입완료</h3>
+				<!-- step_cont_box -->
+				<div class="step_cont_box">
+					<!-- step04_cont -->
+					<div class="step04_cont">
+						<h3 class="cont_tit">써브웨이에 가족이 되신 것을<br> 환영합니다.</h3>
+						<ul class="order_gobtn">
+							<li class="fast">
+								<a href="#none">
+									<strong>FAST-SUB</strong>
+									<i class="icon"></i>
+									<p class="txt">온라인 주문 후 매장에서<br> 픽업/시식하는 서비스입니다.</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!--// step04_cont -->
+
+					<div class="btn_area">
+						<!-- <a class="btn bgc_point i_reg" href="/" style="width:170px;"><span>홈으로</span></a> --><!-- 기존코드 -->
+						<a class="btn bgc_point i_reg" href="http://localhost/html_prj/project/%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.jsp" style="width:170px;"><span>홈으로</span></a><!-- hcy링크변경 -->
+					</div>
+				</div>
+				<!--// step_cont_box -->
+			</div>
+			<!--// 멤버십가입 -->
+		</div>
+		<!--// sub content -->
+	</div>
+ 
+            
+<!-- footer -->
+<div id="footer">
+	    <div class="content">
+	        <!-- util menu -->
+	        <div class="util_menu">
+	            <ul>
+	                <li><a href="http://localhost/html_prj/project/manager/login.jsp" target="_blank">관리자</a></li>
+	            </ul>
+	        </div>
+	        <!--// util menu -->
+
+	        <span class="addr">서울특별시 강남구 테헤란로 132(역삼동) 한독약품빌딩 8층</span>
+	        <span class="rep">대표 : JAEGEON LEE(재건이)</span>
+	        <span class="tel">전화 : 02-797-5036</span>
+			<span class="rep">사업자등록번호 : 123-45-67890</span>
+	        <p class="copyright">JAEGUN`S SANDWICH® is a Registered Trademark of Subway IP LLC. © 2021 JAEGUN`S SANDWICH IP LLC. All Rights Reserved.</p>
+	    </div>
+	</div>
+            <!--// inc footer e -->
+
+         
+</body>
+</html>

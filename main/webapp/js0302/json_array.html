@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+//JSONArray
+function useJsonArray(){
+	//1. JSONArray 생성 : var jsonArr = [{ 속성:값,,, }, { 속성:값,,,, },];
+	var jsonArr = [{ name:"윤상준", age:20 }, { name:"김규미", age:23 }, { name:"김경태", age:25 }, { age:25, name:"박진호",  }]
+	//2. 값 얻기
+	
+	for(var i = 0; i<jsonArr.length; i++){
+		// 박진호는 name과 age가 바뀌어있지만 JSONObcekt은 이름으로 값을 얻기 때문에
+		//입력된 값의 순서와는 상관 없다.
+		alert( jsonArr[i].name + " / " + jsonArr[i].age);
+	}//end for
+	
+}//useJsonArray
+</script>
+</head>
+<body>
+<input type = "button" value = "JSONArray 사용" class = "btnBorder" onclick = "useJsonArray()" />
+</body>
+</html>

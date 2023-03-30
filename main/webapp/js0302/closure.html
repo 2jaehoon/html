@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+function useClosure(){
+	//()를 사용한 closure
+	//1. 클로져 선언
+	var clo = ( { name:"윤상준", addr:"서울시 강남구 역삼동", age:25, func:function(){
+		alert("1조 조장");
+	} 
+	} );
+	
+	//2. 클로져 사용
+	alert( clo.name + " / " + clo.addr + " / " + clo.age );
+	clo.func();
+}//useClosure
+
+</script>
+</head>
+<body>
+<input type = "button" value = "클로져" class = "btnBorder" onclick = "useClosure()"/>
+</body>
+</html>

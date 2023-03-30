@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css"  href="http://localhost/html_prj/common/main_v20230217.css"/>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+window.onload=function(){
+	var chk=localStorage.getItem("chk");
+	if(chk){
+	var obj=document.frm;
+	obj.id.value= localStorage.getItem("id");	
+	}//end if
+	obj.savefId.checked=chk;	
+}//function
+
+function saveId1(){
+	var obj=document.frm;
+	if(obj.saveId.checked){
+		if(obj.idvalue != ""){
+			localStorage.setItem("id",obj.id.value);
+		}
+			localStorage.setItem("chk",obj.saveId.checked);
+	}else{
+			localStorage.removeItem("id");
+			localStorage.removeItem("chk");
+	}//end if
+	
+}//saveId1
+</script>
+</head>
+<body>
+
+<form name="frm">
+<input type="text" name="id" id="id" class="inputBox"/>
+<input type="checkbox" name="savefId" id="saveId" />아이디저장
+<br/>
+
+<input type="button" value="로그인" id="btn" onclick="saveId1()" class="btnBorder"/>
+</form>
+</body>
+</html>

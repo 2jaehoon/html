@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css"  href="http://localhost/html_prj/common/main_v20230217.css"/>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+function multi_json(){
+	//복합형태의 JSON (JSONObject안에 JSONArray를 가지고 있는 형태)
+	var jsonObj={name:"윤상준",age:20, 
+				hobby:[{hobbyName :"자바"},{hobbyName :"음악감상"}
+						,{hobbyName :"게임"}] };
+	alert("이름 : "+ jsonObj.name+" , 나이 : "+ jsonObj.age );
+
+	for(var i= 0 ; i < jsonObj.hobby.length ; i ++){
+		alert(jsonObj.hobby[i].hobbyName );
+	}//end for
+}//multi_json
+
+function multi_json2(){
+	var jsonObj={name:"김규미",age:23, 
+				hobby:[{hobbyName :"자바",hobbyMonth:6},
+						{hobbyName :"음악감상",hobbyMonth:30}
+						,{hobbyName :"게임",hobbyMonth:25}] };
+	
+	var output = "이름 : " + jsonObj.name + ", 나이 : " + jsonObj.age;
+	output += "<table border = '1'><tr><th>취미</th><th>개월수></th></tr>";w
+	
+	var jsonArr = jsonObj.hobby;
+	for(var i = 0; i < jsonObj.hobby.length; i++ ){
+		output += "<tr><td>" + jsonArr[i].hobbyName + "</td><td>"
+			+jsonArr[i].hobbyMonth +" </td></tr>";
+		}//end for
+	output +="</table>";
+	
+	document.getElementById("output").innerHTML = output;
+	
+	
+}//multi_json2
+</script>
+</head>
+<body>
+<input type="button" value="복합형태" class="btnBorder" onclick="multi_json()"/>
+<input type="button" value="복합형태2" class="btnBorder" onclick="multi_json2()"/>
+<div id="output">
+
+
+</div>
+</body>
+</html>

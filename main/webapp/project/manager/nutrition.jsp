@@ -1,0 +1,288 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>영양 성분표</title>
+<link rel="styleshet" type="text/css" href="http://localhost/html_prj/common/main_20230217"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<style type="text/css">
+	body {
+		width : 100%;
+	}
+	
+	.wrapper {
+		width : 80%;
+		margin : auto;
+	}
+	
+	.section {
+		width : 100%;
+	}
+	
+	#nutritionDiv {
+		text-align: center;
+		margin-top : 50px;
+		margin-bottom : 50px;
+	}
+	
+	table {
+		width: 80%;
+		margin : auto;
+		border-collapse: collapse;
+		}
+		table td,
+		table th {
+			text-align: center;
+		}
+		table th {
+			background-color : rgb(12, 66, 101);
+			color : #fff;
+			height: 50px;
+		}
+		
+		table th a {
+		text-decoration: none; /* 링크의 밑줄 제거 */
+  		color: inherit; /* 링크의 색상 제거 */
+		}
+		
+		tbody th {
+			background-color: #EAEAEA;
+			color : black
+		}
+		
+		.nutrition th {
+			background-color: #EAEAEA;
+			color : black;
+		}
+		
+		.nutrition td {
+			border : 1;
+		}
+			
+</style>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<table >
+  <thead>
+	<tr>
+		<th><a href="http://localhost/html_prj/project/manager/member.jsp">회원 관리</a></th>
+		<th><a href="http://localhost/html_prj/project/manager/menu.jsp">메뉴 템플릿</a></th>
+		<th><a href="http://localhost/html_prj/project/manager/order.jsp">주문 관리</a></th>
+		<th><a href="http://localhost/html_prj/project/manager/nutrition.jsp">영양 성분표</a></th>
+		<th><a href="http://localhost/html_prj/project/manager/country.jsp">원산지 정보</a></th>
+		<td style="font-size:15px; background-color : rgb(12, 66, 101);color : #fff;height: 120px;"><a href="http://localhost/html_prj/project/manager/login.jsp">로그아웃</a></td>
+	</tr>
+	</thead>
+	</table>
+	
+	<div class="wrapper">
+						
+<div id="nutritionDiv" >
+    			
+    
+<div class = "section">
+	<table border = "1">
+
+<thead>
+		<tr class="nutrition">
+			<th>메뉴</th>
+			<th>중량(g)</th>
+			<th>열량(kcal)</th>
+			<th>단백질(g)</th>
+			<th>포화지방(g)</th>
+			<th>당류(g)</th>
+			<th>나트륨(mg)</th>
+		</tr>
+</thead>
+
+<tbody>
+
+		<tr class="nutrition">
+			<td><a href="http://localhost/html_prj/project/manager/nutrition_modify.jsp">에그마요 베이컨</a></td>
+			<td>247</td>
+			<td>461</td>
+			<td>19.7</td>
+			<td>6.4</td>
+			<td>7.9</td>
+			<td>756</td>
+		</tr>
+		<tr class="nutrition">
+			<td>에그마요 페퍼로니</td>
+			<td>250</td>
+			<td>470</td>
+			<td>18.8</td>
+			<td>6.7</td>
+			<td>8.1</td>
+			<td>773</td>
+		</tr>
+		<tr class="nutrition">
+			<td>K-바비큐</td>
+			<td>256</td>
+			<td>372</td>
+			<td>25.6</td>
+			<td>2.1</td>
+			<td>14.7</td>
+			<td>899</td>
+		</tr>
+		<tr class="nutrition">
+			<td>폴드 포크 바베큐</td>
+			<td>235</td>
+			<td>327</td>
+			<td>24.8</td>
+			<td>2.1</td>
+			<td>7.8</td>
+			<td>689</td>
+		</tr>
+		<tr class="nutrition">
+			<td>이탈리안 비엠티</td>
+			<td>228</td>
+			<td>388</td>
+			<td>21</td>
+			<td>5.9</td>
+			<td>8.6</td>
+			<td>1064</td>
+		</tr>
+		<tr class="nutrition">
+			<td>써브웨이 클럽</td>
+			<td>216</td>
+			<td>299</td>
+			<td>19.8</td>
+			<td>2.4</td>
+			<td>8.53</td>
+			<td>853</td>
+		</tr>
+		<tr class="nutrition">
+			<td>스테이크&치즈</td>
+			<td>245</td>
+			<td>355</td>
+			<td>28.1</td>
+			<td>4.2</td>
+			<td>8.8</td>
+			<td>780</td>
+		</tr>
+		<tr class="nutrition">
+			<td>치킨 베이컨 아보카도</td>
+			<td>246</td>
+			<td>355</td>
+			<td>20.2</td>
+			<td>3.2</td>
+			<td>9.0</td>
+			<td>940</td>
+		</tr>
+		<tr class="nutrition">
+			<td>로티세리 바비큐 치킨</td>
+			<td>249</td>
+			<td>327</td>
+			<td>29.1</td>
+			<td>2.5</td>
+			<td>7.8</td>
+			<td>542</td>
+		</tr>
+		<tr class="nutrition">
+			<td>로스트 치킨</td>
+			<td>237</td>
+			<td>300</td>
+			<td>26</td>
+			<td>1.3</td>
+			<td>8.7</td>
+			<td>605</td>
+		</tr>
+		<tr class="nutrition">
+			<td>쉬림프</td>
+			<td>192</td>
+			<td>229</td>
+			<td>13.6</td>
+			<td>0.6</td>
+			<td>7.8</td>
+			<td>357</td>
+		</tr>
+		<tr class="nutrition">
+			<td>치킨 데리야끼</td>
+			<td>255</td>
+			<td>314</td>
+			<td>26.5</td>
+			<td>1.2</td>
+			<td>10.1</td>
+			<td>698</td>
+		</tr>
+		<tr class="nutrition">
+			<td>스파이시 이탈리안</td>
+			<td>224</td>
+			<td>464</td>
+			<td>20.7</td>
+			<td>9.1</td>
+			<td>8.7</td>
+			<td>1250</td>
+		</tr>
+		<tr class="nutrition">
+			<td>비엘티</td>
+			<td>182</td>
+			<td>300</td>
+			<td>15.9</td>
+			<td>3.7</td>
+			<td>7.9</td>
+			<td>666</td>
+		</tr>
+		<tr class="nutrition">
+			<td>치킨 슬라이스</td>
+			<td>221</td>
+			<td>265</td>
+			<td>18.6</td>
+			<td>0.9</td>
+			<td>8.7</td>
+			<td>751</td>
+		</tr>
+		<tr class="nutrition">
+			<td>햄</td>
+			<td>220</td>
+			<td>262</td>
+			<td>19</td>
+			<td>1</td>
+			<td>8.4</td>
+			<td>680</td>
+		</tr>
+		<tr class="nutrition">
+			<td>참치</td>
+			<td>238</td>
+			<td>316</td>
+			<td>26.9</td>
+			<td>1.4</td>
+			<td>7.6</td>
+			<td>535</td>
+		</tr>
+		<tr class="nutrition">
+			<td>에그마요</td>
+			<td>238</td>
+			<td>416</td>
+			<td>16.4</td>
+			<td>4.8</td>
+			<td>7.7</td>
+			<td>554</td>
+		</tr>
+		<tr class="nutrition">
+			<td>베지</td>
+			<td>164</td>
+			<td>209</td>
+			<td>9.2</td>
+			<td>0.6</td>
+			<td>7.6</td>
+			<td>262</td>
+		</tr>
+	</tbody>
+</table>
+		
+	
+<button type="button" onclick="location.href='http://localhost/html_prj/project/manager/nutrition_add.jsp'">영양 성분 추가</button></button>
+
+</div>
+</div>
+</div>
+			
+
+</body>
+</html>

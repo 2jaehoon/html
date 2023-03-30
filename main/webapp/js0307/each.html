@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css">
+
+</style>
+<!-- jQuery CDN 시작-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- jQuery CDN 끝-->
+<script type="text/javascript">
+$(function(){
+	$("#btn").click(function(){
+	//alert($("[name='hobby']:checked").length);
+	//체크박스의 체크된 개수를 얻기
+	var cnt=0;
+	/* for(var i =0; i< frm.hobby.length; i++){
+		if( frm.hobby[i].checked){
+			cnt++;
+		}
+	
+	}
+	alert("체크된 갯수 : " + cnt);
+	alert($("[type='checkbox']:checked").length); */
+	//어떤 체크박스가 체크되었는지""])
+	$("[name = 'hobby']").each(function(i, ele){
+		if( $(ele).is(":checked") ){
+			alert( $(ele).val() )
+		}
+	})//end each
+	});//clickㅋㅋㅋㅋㅋ
+})//ready
+</script>
+</head>
+<body>
+<label>취미</label><br>
+<form name = "frm">
+<input type = "checkbox" name = "hobby" value = "게임"/>게임<br>
+<input type = "checkbox" name = "hobby" value = "유튜브" checked = "checked"/>유튜브<br>
+<input type = "checkbox" name = "hobby" value = "등산"/>등산<br>
+<input type = "checkbox" name = "hobby" value = "음악 감상"/>음악 감상<br>
+<input type = "checkbox" name = "hobby" value = "태클"  checked="checked"/>독서<br>
+<input type = "button" value = "값 얻기" class = "btnBorder" id = "btn"/>
+<div id = "output"></div>
+</form>
+</body>
+</html>

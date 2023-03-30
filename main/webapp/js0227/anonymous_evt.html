@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+//기명 함수로 이벤트 처리
+//윈도우가 로딩 되었을 때 이벤트 등록
+window.onload = function(){
+	//이벤트를 등록할 때에는 onclick이면 on을 제외하고 click으로 등록한다.
+	document.getElementById("btnName").addEventListener("click", getName)
+	document.getElementById("selAddr").addEventListener("change", getAddr)
+}
+
+function getName(){
+	var obj = document.frm;
+
+	var name = obj.name.value;
+	document.getElementById("output").innerHTML = name;
+}//getName
+
+function getAddr(){
+	var obj = document.frm;
+
+	
+	if( obj.setAddr.selectedIndex != 0 ){
+		
+	
+	var addr = obj.addr.value;
+	document.getElementById("output").innerHTML = addr;
+	}//end if
+}//getAddr
+
+</script>
+</head>
+<body>
+<form name = 'frm'>
+<input type = "text" name = "name" class = "inputBox" value = "김경태"/><br/>
+<input type = "text" name = "addr" class = "inputBox" value = "서울시 강남구 역삼동"/><br/>
+<input type = "button" value = "이름얻기"  id = "btnName" class = "btnBorder"/>
+<select id = "selAddr" name = "setAddr">
+<option value = "none">none</option>
+<option value = "addr">주소 확인</option>
+</select>
+</form>
+<div id = "output"></div>
+</body>
+</html>

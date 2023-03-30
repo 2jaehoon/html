@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css"  href="http://localhost/html_prj/common/main_v20230217.css"/>
+<style type="text/css">
+#div{ height: 200px; width: 100px; border:1px solid #333; background-color: #E9DAEC}
+</style>
+<!-- CDN jQuery 설정 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+function getCssValue(){
+	//jQuery를 사용하여 값 얻기 
+	var output="div의 높이 : " +$("#div").css("height")+"<br/>";
+	output+="div 넓이 : "+ $("#div").css("width")+"<br>";
+	output+="div border : "+ $("#div").css("border")+"<br>";
+	output+="div background : "+ $("#div").css("background-color")+"<br>";
+	
+	$("#output").html( output );
+}
+function getCssValue2(){
+	//id가  btn인 버튼의 넓이,높이, 바닥색,글자색을 얻어와서 id가 output인 
+	//div에 출력해보세요.
+	var output="button의 높이 : " +$("#btn").css("height")+"<br/>";
+	output+="button 넓이 : "+ $("#btn").css("width")+"<br>";
+	output+="button background : "+ $("#btn").css("background-color")+"<br>";
+	output+="글자색 : "+ $("#btn").css("color")+"<br>";
+	
+	$("#output").html( output );
+}//getCssValue2
+
+function setCssValue(){
+	//대상의 속성값 변경
+	$("#div").css("width","300px")
+	$("#div").css("height","100px")
+	$("#div").css("background-color","#FF0000")
+}//setCssValue
+</script>
+</head> 
+<body>
+<div id="div">값 얻기</div>
+<input type="button" value="CSS 속성 값 얻기" class="btnBorder" onclick="getCssValue()"/>
+<input type="button" value="CSS 속성 값 얻기2" class="btnBorder" id="btn" onclick="getCssValue2()"/>
+<div id="output"></div>
+
+<input type="button" value="CSS 속성 값 설정" class="btnBorder" onclick="setCssValue()"/>
+
+</body>
+</html>

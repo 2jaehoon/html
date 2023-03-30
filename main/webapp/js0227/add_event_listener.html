@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+//무기명 함수로 이벤트 처리
+//윈도우가 로딩 되었을 때 이벤트 등록
+window.onload = function(){
+	var obj = document.frm;
+	//html <body>와 script 영역이 같은 시점에 동작을 한다.
+	//script 영역에서 <body> 영역에 접근 가능
+	//var btnName = document.frm.btnName;
+	//alert(btnName);
+	//무기명 함수로 이벤트 등록
+	//document.getElementById("아이디").onXxx = function(){ 이벤트가 발생했을 때 처리할 코드 }
+	document.getElementById("btnName").onclick = function(){
+		var name = obj.name.value;
+		document.getElementById("output").innerHTML = '입력 이름 : ' + name;
+	}
+	document.getElementById("btnAddr").onclick = function(){
+		var addr = obj.addr.value;
+		document.getElementById("output").innerHTML = '주소 : ' + addr;
+	}
+}
+
+</script>
+</head>
+<body>
+<form name = 'frm'>
+<input type = "text" name = "name" class = "inputBox"/><br/>
+<input type = "text" name = "addr" class = "inputBox"/><br/>
+<input type = "button" value = "이름얻기"  id = "btnName" class = "btnBorder"/>
+<input type = "button" value = "주소얻기"  id = "btnAddr" class = "btnBorder"/><br/>
+</form>
+<div id = "output"></div>
+</body>
+</html>

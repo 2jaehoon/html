@@ -1,0 +1,463 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+    
+
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<!-- #201224_hmkim -->
+<head>
+	<title>SUBWAY</title>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+
+    
+    
+    
+    
+        <!-- SNS LINK -->
+        <meta content="website" property="og:type" />
+        <meta content="SUBWAY KOREA" property="og:title" />
+        <meta content="http://m.subway.co.kr/" property="og:url" /><!-- 20180221 -->
+        <meta content="http://m.subway.co.kr/images/common/subway_og.png" property="og:image" /><!-- 20180221 -->
+        <meta content="image/png" property="og:image:type" />
+        <meta content="570" property="og:image:width" />
+        <meta content="400" property="og:image:height" />
+        <meta content="신선하고 건강한 글로벌 NO.1 샌드위치 브랜드, 써브웨이" property="og:description" />
+        <!--// SNS LINK -->
+    
+
+
+    <link href="http://subway.co.kr/" rel="canonical" /><!-- 20180221 -->
+    <meta content="신선하고 건강한 글로벌 NO.1 샌드위치 브랜드, 써브웨이" name="description" /><!-- 20181212 -->
+    <link rel="shortcut icon" type="image/x-icon" href="/images/common/subway_favicon.ico?v=2022122101" />
+        <!-- 20180131 -->
+	<link rel="stylesheet" type="text/css" href ="http://localhost/html_prj/project/css/common/ui.common.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/html_prj/project/css/common/jquery.mCustomScrollbar.min.css" />   
+	
+	<script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery-ui-1.12.0.min.js"></script>
+	<script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery.easing.1.3.min.js"></script>
+	<script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery.blockUI.min.js"></script>
+	<script type="text/javascript" src="http://localhost/html_prj/project/js/common/TweenMax.min.js"></script>
+	<script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery.cookie.js"></script>
+	<script type="text/javascript" src="http://localhost/html_prj/project/js/common/ui.common.js"></script>
+	<script type="text/javascript" src="http://localhost/html_prj/project/js/common/subway.common.js"></script>
+	<script type="text/javascript" src="http://localhost/html_prj/project/js/common/jsrender.js"></script>
+	<script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery.tmpl.min.js"></script>
+	<script type="text/javascript" src="http://localhost/html_prj/project/js/common/waffle.utils.js"> </script>
+	
+	<script type="text/javascript">
+	function btnCart(){
+			//확인버튼 클릭시 동작
+			alert("장바구니에 담겼습니다. 장바구니로 이동합니다.");
+			//장바구니로 url걸기.
+			window.location = 'http://localhost/html_prj/project/cart.jsp';
+	}
+	</script>
+
+        
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "Person",
+                "name": "신선하고 건강한 글로벌 NO.1 샌드위치 브랜드, 써브웨이",
+                "url": "http://www.subway.co.kr",
+                "sameAs": [
+                    "https://www.facebook.com/Subwaykr",
+                    "https://www.youtube.com/user/Subwaykr"
+                ]
+            }
+        </script>
+        <!-- Facebook Pixel Code -->
+        <script>
+            !function (f, b, e, v, n, t, s) {
+                if (f.fbq) return;
+                n = f.fbq = function () {
+                    n.callMethod ?
+                        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };
+                if (!f._fbq) f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = '2.0';
+                n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;
+                t.src = v;
+                s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s)
+            }(window, document, 'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '825983077607831');
+            fbq('track', 'PageView');
+        </script>
+        <noscript>
+            </noscript><img height="1" src="https://www.facebook.com/tr?id=825983077607831&ev=PageView&noscript=1" style="display:none" width="1" />
+        
+        <!-- End Facebook Pixel Code -->
+
+        <!-- Kakao Pixel Code -->
+        <!--
+        <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+        <script type="text/javascript">
+            kakaoPixel('6816847143406094352').pageView();
+        </script>
+         -->
+        <!-- Kakao Pixel Code -->
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="http://localhost/html_prj/project/css/fast_sub/ui.order.css?v=2022122101" />
+	<script type="text/javascript" src="http://localhost/html_prj/project/js/fast_sub/item_view.js?v=2022122101"></script>
+	<script type="text/javascript" src="http://localhost/html_prj/project/js/fast_sub/favoriteMenu.js?v=2022122101"></script>
+	<script>
+		/*<![CDATA[*/
+		var ordItemsVO = {'addedSelectIngredientList':null,'availableSetYn':null,'baseIngredientList':['bread','warm','cheese','vegetable','sauce'],'baseItemAmt':null,'baseItemIdx':8281,'bread':{'ingredientsCode':'B0002','ingredientsIdx':2,'ingredientsName':'\uD30C\uB9C8\uC0B0 \uC624\uB808\uAC00\uB178','ingredientsType':'INGREDIENTS_TYPE.TYPE1','ordDetailIdx':null,'ordItemsIgdIdx':null,'regDt':null,'regKey':null,'useFg':null},'breadAmt':6400,'breadType':'15SUB','cartIdx':null,'cartStoreMatch':false,'category':null,'cheese':{'ingredientsCode':'C0001','ingredientsIdx':7,'ingredientsName':'\uC544\uBA54\uB9AC\uCE78\uCE58\uC988','ingredientsType':'INGREDIENTS_TYPE.TYPE2','ordDetailIdx':null,'ordItemsIgdIdx':null,'regDt':null,'regKey':null,'useFg':null},'chooseIngredientList':['bread','warming','cheese','vegetable','sauce'],'cpnAmt':null,'cupIncldYn':null,'cupItemCd':null,'doubleCheese':null,'doubleCheeseAmt':null,'doubleCheeseFg':null,'doubleCheeseMeta':null,'doubleCheeseOpt':null,'doubleUpFg':null,'doubleup':null,'doubleupInfo':null,'emptyIngredientList':[],'evntDisplayType':'','flatPizzaYn':null,'groupCd':'102','hasMappingItemYn':null,'historyVegeYn':'N','hotFg':null,'immutableYn':'N','itemCode':'01769','itemCombinationIdx':71,'itemExtraDesc':'','itemGubun':'sandwich','itemIdx':227,'itemName':'\uC5D0\uADF8\uB9C8\uC694 \uBCA0\uC774\uCEE8','itemShortName':null,'itemType':'ITEM_SANDWICH','lsmItemImg':null,'lsmItemName':null,'menuType':'ITEM_SANDWICH','modDt':null,'modKey':null,'morningYn':'N','ordAddoptFg':null,'ordAmt':7000,'ordDetailIdx':null,'ordIdx':null,'ordType':'ORD_TYPE.FAST_SUB','paveFg':'Y','promotionSelect':null,'promotionViewYn':'N','promotionYn':'N','qty':null,'receiverAddr':null,'receiverAddrDtl':null,'receiverHp':null,'receiverZipcd':null,'regDt':null,'regKey':null,'sauceList':[{'ingredientsCode':'S0011','ingredientsIdx':23,'ingredientsName':'\uB79C\uCE58','ingredientsType':'INGREDIENTS_TYPE.TYPE5','ordDetailIdx':null,'ordItemsIgdIdx':null,'regDt':null,'regKey':null,'useFg':null},{'ingredientsCode':'S0009','ingredientsIdx':21,'ingredientsName':'\uC2A4\uC704\uD2B8 \uCE60\uB9AC','ingredientsType':'INGREDIENTS_TYPE.TYPE5','ordDetailIdx':null,'ordItemsIgdIdx':null,'regDt':null,'regKey':null,'useFg':null}],'selectChoiceYn':'Y','selectToppingYn':null,'setFg':null,'setOptionInfoList':[],'setOptionList':null,'setOptionType':null,'sideYn':'N','storCd':'67276','subDogYn':null,'surveyPrizeYn':null,'toppingInfoList':null,'toppingList':null,'totalDoubleupAmt':0,'totalSetOptionAmt':0,'totalSideAmt':null,'totalToppingAmt':0,'ultraCheeseYn':null,'useFg':null,'vegetableList':[{'ingredientsCode':'V0011','ingredientsIdx':67,'ingredientsName':'\uC624\uC774','ingredientsType':'INGREDIENTS_TYPE.TYPE4','ordDetailIdx':null,'ordItemsIgdIdx':null,'regDt':null,'regKey':null,'useFg':null},{'ingredientsCode':'V0010','ingredientsIdx':66,'ingredientsName':'\uD1A0\uB9C8\uD1A0','ingredientsType':'INGREDIENTS_TYPE.TYPE4','ordDetailIdx':null,'ordItemsIgdIdx':null,'regDt':null,'regKey':null,'useFg':null},{'ingredientsCode':'V0009','ingredientsIdx':64,'ingredientsName':'\uC591\uC0C1\uCD94','ingredientsType':'INGREDIENTS_TYPE.TYPE4','ordDetailIdx':null,'ordItemsIgdIdx':null,'regDt':null,'regKey':null,'useFg':null},{'ingredientsCode':'V0016','ingredientsIdx':72,'ingredientsName':'\uD560\uB77C\uD53C\uB1E8','ingredientsType':'INGREDIENTS_TYPE.TYPE4','ordDetailIdx':null,'ordItemsIgdIdx':null,'regDt':null,'regKey':null,'useFg':null},{'ingredientsCode':'V0013','ingredientsIdx':69,'ingredientsName':'\uC591\uD30C','ingredientsType':'INGREDIENTS_TYPE.TYPE4','ordDetailIdx':null,'ordItemsIgdIdx':null,'regDt':null,'regKey':null,'useFg':null},{'ingredientsCode':'V0012','ingredientsIdx':68,'ingredientsName':'\uD53C\uB9DD','ingredientsType':'INGREDIENTS_TYPE.TYPE4','ordDetailIdx':null,'ordItemsIgdIdx':null,'regDt':null,'regKey':null,'useFg':null}],'warming':{'ingredientsCode':'H0001','ingredientsIdx':11,'ingredientsName':'\uD1A0\uC2A4\uD305','ingredientsType':'INGREDIENTS_TYPE.TYPE3','ordDetailIdx':null,'ordItemsIgdIdx':null,'regDt':null,'regKey':null,'useFg':null}}
+		/*]]>*/
+	</script>
+
+    </head>
+    <!--// inc header e -->
+
+<body>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-112310613-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+            gtag('js', new Date());
+            gtag('config', 'UA-112310613-1');
+        </script>
+
+        <!-- Global site tag (gtag.js) - AdWords: 802450606 -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-802450606"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+
+            gtag('config', 'AW-802450606');
+        </script>
+
+
+        
+        <div id="wrap">
+            <!-- inc header s -->
+           <div id="header">
+    <script>
+        /*<![CDATA[*/
+        var memberVO = false;
+        /*]]*/
+    </script>
+    <div class="content">
+        <h1 class="logo"><a href="http://localhost/html_prj/project/%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B42.jsp">JaeGun's Sandwich</a></h1>
+        <!-- gnb -->
+         <nav id="gnb">
+            <ul>
+                <li>
+                    <a class="dp1" href="#none">메뉴소개</a>
+                    <div class="dp2">
+                        <ul>
+                            <li>
+                                <a href=http://localhost/html_prj/project/%EB%A9%94%EB%89%B4%EC%86%8C%EA%B0%9C_%EB%A1%9C%EA%B7%B8%EC%9D%B8.jsp>샌드위치</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            
+                <li>
+                    <a href="#none" class="dp1">재건쓰</a>
+                    <div class="dp2">
+                        <ul>
+                            <li><a href="http://localhost/html_prj/project/menu_promise_login.jsp">재건쓰 약속</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" class="dp1">가맹점</a>
+                    <div class="dp2">
+                        <ul>
+                            <li><a href="http://localhost/html_prj/project/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88_%EB%A1%9C%EA%B7%B8%EC%9D%B8.jsp">재건쓰 프랜차이즈</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="dp1" href="javascript:void(0);">온라인 주문</a>
+                    <div class="dp2">
+                        <ul>
+                            <li><a href="http://localhost/html_prj/project/fast_sub_step1.jsp">FAST-SUB</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!--// gnb -->
+
+        <!-- util menu -->
+        <div class="util_menu">
+            <ul>
+                
+                    <li class="after_sign"><a href="http://localhost/html_prj/project/%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.jsp">로그아웃</a></li>
+                    <li class="after_sign"><a href="http://localhost/html_prj/project/mysub.jsp">MY-SUB</a></li>
+                    <li class="icon_menu cart on"><!-- 장바구니담았을때 class="on"추가 -->
+                        <!-- <a href="/cart/fastsub"> -->
+                        <a href="http://localhost/html_prj/project/cart_null.jsp">
+                            <span class="blind">장바구니</span>
+                            <strong>0</strong>
+                        </a>
+                    </li>
+                
+                
+                <li class="icon_menu global_subway">
+                    <a href="http://www.subway.com/en-us/exploreourworld" target="_blank" title="Global Subway"><span class="blind">Global Subway</span></a>
+                </li>
+            </ul>
+        </div>
+        <!--// util menu -->
+    </div>
+</div>
+            <!--// inc header e -->
+
+
+            <!-- container s -->
+            <div id="container">
+	<form method="post" name="moveForm">
+		<input name="changeYn" type="hidden" value="Y" />
+		<input name="ordType" type="hidden" value="ORD_TYPE.FAST_SUB" />
+		<input name="storCd" type="hidden" value="67276" />
+		<input name="cateCd" type="hidden" value="ITEM_SANDWICH" />
+		<input name="paveFg" type="hidden" value="Y" />
+		
+	</form>
+	<form id="orderForm" name="orderForm">
+		<input name="itemIdx" type="hidden" value="227" />
+		<input id="ordType" name="ordItemsVO.ordType" type="hidden" value="" />
+		<input name="paveFg" type="hidden" value="Y" />
+	</form>
+	<!-- sub content s -->
+	<div class="order fast_sub" id="content">
+		<!-- index -->
+		<div class="menu_view">
+			<div class="order_title">
+				<h3>Fast-Sub</h3>
+				<p>
+					<th:object>온라인 주문 후 매장에서 픽업/시식하는 서비스 입니다.</th:object>
+					
+				</p>
+			</div>
+			<ol class="order_step">
+				<li class="step_shop">
+					<strong>STEP 1</strong>
+					매장선택
+				</li>
+				<li class="step_menu on">
+					<strong>STEP 2</strong>
+					메뉴선택
+				</li>
+				<li class="step_order">
+					<strong>STEP 3</strong>
+					주문하기
+				</li>
+				<li class="step_payment">
+					<strong>STEP 4</strong>
+					결제하기
+				</li>
+			</ol>
+					<!-- <li data-cate-cd="ITEM_SANDWICH" class="active">
+						<a data-cate-cd="ITEM_SANDWICH" href="javascript:;" name="itemMenu">샌드위치</a>
+					</li> -->
+			<div class="order_con">
+				<div class="menu_info">
+					<div class="menu_info">
+						<!-- 2019-12-02 #172 제품썸네일 영역 마크업 수정 (figure 태그로 감쌈) -->
+						<figure class="img">
+							
+							<img onError="this.src='http://localhost/html_prj/project/images/Egg-Mayo_20211231100704258.png'" alt="에그마요 베이컨" src="/upload/item/에그마요-베이컨-샌드위치15cm-단품_20230103125943558.png" />
+						</figure>
+						<!--// 2019-12-02 #172 제품썸네일 영역 마크업 수정 (figure 태그로 감쌈) -->
+						<div class="txt_info"><!-- 2019-12-02 #172 제품 정보 영역 클래스 추가 -->
+							<h3>
+								
+									<th:object>샌드위치</th:object>
+									
+								
+
+								
+								<strong>에그마요 베이컨</strong>
+								<em style="height:30px">
+                          		 <span>Egg Mayo Bacon</span>
+                        	   <!-- 즐겨찾기 버튼 -->
+                        		</em>
+							</h3>
+
+							
+							<p>누구나 인정하는 베스트 꿀조합, 에그마요와 베이컨의 완벽한 조합을 즐겨보세요.<br/></p>
+
+<!--jiwon 버튼안넘어가서 버튼 새로만듦.
+	 							<button class="btn bgc_point i_reg" id="itemConbiPopBtn" style="width:183px;" type="button" data-item-gubun="sandwich" data-store-cd="67276" data-combination-idx="71" data-item-code="01769">
+ --><!-- jiwon 버튼 아래꺼 사용. 			<button class="btn bgc_point i_reg" style="width:183px;" type="button" >
+								<span >
+								<a href="http://localhost/html_prj/project/fast_sub_step3.jsp">
+								<font color="ffffff">
+								주문하기
+								</font>
+								</a>
+								</span>
+							</button> -->
+						</div>
+					</div>
+					<div class="nutrition_list">
+						<h4>영양성분표</h4>
+						<div class="board_list_wrapper">
+							<div class="content">
+								<table class="nutrition_table">
+									<caption>영양성분표 테이블</caption>
+									<colgroup>
+										<col width="16%" />
+										<col width="17%" />
+										<col width="17%" />
+										<col width="17%" />
+										<col width="*" />
+										<col width="16%" />
+									</colgroup>
+									<thead>
+									<tr>
+										<th scope="col">중량(g)</th>
+										<th scope="col">열량(kcal)</th>
+										<th scope="col">단백질(g)</th>
+										<th scope="col">포화지방(g)</th>
+										<th scope="col">당류(g)</th>
+										<th scope="col">나트륨(mg)</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>
+											<!--<div th:text="${ordItemsVO.itemCode == '01531' ? '302' : ordItemsVO.itemCode == '01532' ? '258' : rs.itemWeight}"></div>-->
+											<div>247</div>
+										</td>
+										<td>
+											<!--<div th:text="${ordItemsVO.itemCode == '01531' ? '595' : ordItemsVO.itemCode == '01532' ? '445' : rs.itemCalorie}"></div>-->
+											<div>461</div>
+										</td>
+										<td>
+											<!--<div th:text="${ordItemsVO.itemCode == '01531' ? '28.2 (51%)' : ordItemsVO.itemCode == '01532' ? '21.6 (39%)' : rs.itemProtein}"></div>-->
+											<div>19.7(36%)</div>
+										</td>
+										<td>
+											<!--<div th:text="${ordItemsVO.itemCode == '01531' ? '10.1 (68%)' : ordItemsVO.itemCode == '01532' ? '6.7 (45%)' : rs.itemFat}"></div>-->
+											<div>6.4(43%)</div>
+										</td>
+										<td>
+											<!--<div th:text="${ordItemsVO.itemCode == '01531' ? '8.8 (9%)' : ordItemsVO.itemCode == '01532' ? '9.0 (9%)' : rs.itemSugars}"></div>-->
+											<div>7.9</div>
+										</td>
+										<td>
+											<!--<div th:text="${ordItemsVO.itemCode == '01531' ? '1356 (68%)' : ordItemsVO.itemCode == '01532' ? '1153 (58%)' : rs.itemSalt}"></div>-->
+											<div>756(38%)</div>
+										</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="table_info">
+							<!-- (2020.08.20) 카테고리별 영양성분 입력 화면 관리자 추가 건: 메뉴별 개별로 입력하도록 수정 -->
+							<div class="table_desc">
+								<p>※  샌드위치의 영양 정보는 기본 야채 5종(양상추, 토마토, 오이, 피망, 양파),  위트 브레드 및 제품에 따른 미트류가 포함되어 있으며, 치즈와 소스는 제외됩니다.<br>※ 샐러드의 영양 정보는 기본 야채 5종(양상추, 토마토, 오이, 피망, 양파) 및 제품에 따른 미트류가 포함되어 있으며, 치즈와 소스는 제외됩니다.<br>※ 단, 메뉴명에 ‘치즈’가 포함되는 경우 치즈의 영양정보도 포함됩니다.<br>※ 랩, 그릴드 랩의 영양 정보는 치즈와 소스를 포함한 고정 레시피를 기준으로 합니다.<br>※ 아침메뉴의 영양 정보는  위트 브레드 및 제품에 따른 미트류, 야채, 아메리칸 치즈가 포함되어 있으며, 소스는 제외됩니다.<br>※ 영양 정보표에 표시된 제품의 영양 정보/중량은 표준 레시피를 기준으로 하나, 계절의 변화, 공급사의 변화, 원재료의 수급 상황 및 제품 제조시에 발생하는 중량의 차이 등에 따라 실제 제공되는 제품의 영양 정보/중량과 차이가 있을 수 있습니다.<br>※ 괄호 안 %는 1일 영양소 기준치에 대한 비율입니다.<br>※ 매장에 따라 제공 방식(찹 샐러드/스파이럴 샐러드)이 상이할 수 있습니다.</p>
+							</div>
+							<ul class="table_btn">
+								
+							</ul>
+						</div>
+					</div>
+					<br>
+					<div class="menu_total">
+							<input name="eachPrice" type="hidden" value="5500" />
+							<dl class="count">
+								<dt>수량</dt>
+								<dd>
+									<a class="minus" href="javascript:;" id="qtySub">수량 빼기</a>
+									<input id="ordQty" onfocus="this.blur();" type="text" value="1" />
+									<a class="plus" href="javascript:;" id="qtyAdd">수량 더하기</a>
+								</dd>
+							</dl>
+							<dl class="total_won">
+								<dt>총 주문 금액</dt>
+								<dd>
+									<strong id="finalAmt">5,500</strong>
+									<span>원</span>
+								</dd>
+							</dl>
+							
+						</div>
+
+					<div class="btn_area">
+						
+							<button class="btn bgc_white btn_cart" type="button" onclick="btnCart()">
+								<span>
+								<font color="#009223"><strong>
+								장바구니
+								</strong>
+								</font>
+								</span>
+							</button>
+							<button class="btn i_reg btn_order bgc_point" type="button">
+								<span>
+								<a href="http://localhost/html_prj/project/fast_sub_step3.jsp">
+								<font color="ffffff"><strong>
+								주문하기
+								</strong>
+								</font>
+								</a>
+								</span>
+							</button>
+						
+						
+						
+					</div>
+				</div>
+			</div>
+			<!--// index -->
+		</div>
+		<!--// sub content e -->
+	</div>
+	<!--// container -->
+
+</div>
+
+           <!-- footer -->
+<div id="footer">
+	    <div class="content">
+	        <!-- util menu -->
+	        <div class="util_menu">
+	            <ul>
+	                <li><a href="http://localhost/html_prj/project/manager/login.jsp" target="_blank">관리자</a></li>
+	            </ul>
+	        </div>
+	        <!--// util menu -->
+
+	        <span class="addr">서울특별시 강남구 테헤란로 132(역삼동) 한독약품빌딩 8층</span>
+	        <span class="rep">대표 : JAEGEON LEE(재건이)</span>
+	        <span class="tel">전화 : 02-797-5036</span>
+			<span class="rep">사업자등록번호 : 123-45-67890</span>
+	        <p class="copyright">JAEGUN`S SANDWICH® is a Registered Trademark of Subway IP LLC. © 2021 JAEGUN`S SANDWICH IP LLC. All Rights Reserved.</p>
+	    </div>
+	</div>
+            <!--// inc footer e -->
+
+    
+
+</body></html>

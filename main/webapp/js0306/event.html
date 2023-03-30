@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css">
+
+</style>
+<!-- jQuery CDN 시작-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- jQuery CDN 끝-->
+
+<script type="text/javascript">
+$(function(){
+	$("#name").blur(function(){//focusout과 비슷
+		$("#output").html("커서가 빠져 나갔음");
+	});//blur
+	
+	
+	$("#over").mouseover(function(){
+		$("#output").html("마우스 포인터가 올라 왔음");
+	});
+	
+	$("#out").mouseout(function(){
+		$("#output").html("마우스 포인터가 빠져 나갔음");
+		
+	});
+	
+	$("#move").mousemove(function( evt ){
+		$("#output").html("마우스 포인터가 움직였음... 좌표 : " + 
+				event.pageX + ", y좌표 : " + event.pageY);
+	});
+	
+	$("#click").click(function( evt ){
+		$("#output").html("마우스 포인터가 클릭할 때... 좌표 : " + 
+				event.pageX + ", y좌표 : " + event.pageY);
+	});
+	
+	
+	//behavior selector는 jQuery에서 동작하지 않는다. => hover 함수 이용
+	$("li").hover(function(){
+		//마우스 포인터가 들어 갔음
+		//alert( this) this는 이벤트를 발생시킨 자신 태그
+		$(this).css("font-size","20px");
+		$("#output").html("<strong>마우스 포인터 올라옴</string>");
+	},
+	function(){
+		//마우스가 포인터가 빠져 나갔음
+		$("#output").html("<strong>마우스 포인터 빠져나감</string>")
+		$("li").css("font-size","12px");
+	})
+});//
+</script>
+</head>
+<body>
+<label>커서가 빠져 나가면</label>
+<input type="text" name="name" value="blur" id="name" class="inputBox"/>
+<br>
+<label>마우스 포인터가 올라가면</label> 
+<img src = "http://localhost/html_prj/common/images/tae.png"/ id = "over">
+<br>
+<label>마우스 포인터가 빠져 나가면</label> 
+<img src = "http://localhost/html_prj/common/images/tae.png" id = "out"/>
+<br>
+<label>마우스 포인터가 움직이면</label> 
+<img src = "http://localhost/html_prj/common/images/tae.png" id = "move"/>
+<label>마우스 포인터가 클릭되면</label> 
+<img src = "http://localhost/html_prj/common/images/tae.png" id = "click"/>
+<ol style = "margin: 20px">
+<li>사과</li>
+<li>딸기</li>
+<li>배</li>
+</ol>
+<div id = "output"></div>
+</body>
+</html>

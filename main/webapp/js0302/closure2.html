@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+function testClo(){
+	var name = "윤상준";
+	var addr = function(){
+		return "서울시 강남구 역삼동";
+	}//function
+	
+	//JSONObject을 사용하여 외부에 사용할 내부의 이름을 연결한 후 반환
+	return { na:name, ad:addr };
+}//testClo
+
+function testClo2(){
+	var name = "윤상준2";
+	var addr = function(){
+		return "서울시 강남구 역삼동2";
+	}//function
+	
+	//JSONObject을 사용하여 외부에 사용할 내부의 이름을 연결한 후 반환
+	return { na:name, ad:addr };
+}//testClo2
+
+
+function clo(){
+	//()를 붙이지 않고 closure를 사용하면 호출하는 곳에서 ()를 사용할 때마다 붙여줘야한다.
+	
+	var closure = testClo;
+	//클로져를 사용할 때 ()를 붙여서 JSONObject으로 만들어서 사용하게 된다.
+	alert( closure().na );
+	alert( closure().ad() );
+	
+	
+}//clo
+
+function clo2(){
+	//()를 붙여서 closure를 사용하면 호출하는 곳에서 ()를 붙이지 않고 바로 사용할 수 있다.
+	
+	var closure = testClo();
+	//클로져를 사용할 때 ()를 붙여서 JSONObject으로 만들어서 사용하게 된다.
+	alert( closure.na );
+	alert( closure.ad() );
+	
+	
+}//clo
+
+
+
+</script>
+</head>
+<body>
+<input type = "button" value ="클로져" class = "btnBorder" onclick = "clo()"/>
+<input type = "button" value ="클로져2" class = "btnBorder" onclick = "clo2()"/>
+</body>
+</html>

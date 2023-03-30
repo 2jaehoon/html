@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css"  href="http://localhost/html_prj/common/main_v20230217.css"/>
+<style type="text/css">
+.div{ width: 200px; height: 100px; background-color: #0000FF; border:1px solid #333 }
+.testCss{ font-weight: bold; font-size: 30px; font-family: 궁서 }
+.writeCss{ font-weight: normal; font-size: 20px; font-family: "맑은 고딕"; color: #FF0000  }
+</style>
+<!-- jQuery CDN설정 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+function addClass(){
+	$("#div").addClass( "div" );
+}//addClass
+function removeClass(){
+	$("#div").removeClass( "div" );
+}//removeClass
+//css재설정 버튼이 클릭되면, 글자의 크기: 20px, 일반글자, 글자색 : 빨간색인 
+//css를 가진 writeCss를 testCss를 삭제 한 후  div2에 적용
+function testClass(){
+	/* $("#div2").removeClass( "testCss" );
+	$("#div2").addClass( "writeCss" ); */
+	//jQuery chain문법 지원
+	$("#div2").removeClass( "testCss" ).addClass( "writeCss" );
+}
+</script>
+</head>
+<body>
+<div id="div">div</div>
+<input type="button"  value="css설정" class="btnBorder" onclick="addClass()"/>
+<input type="button"  value="css해제" class="btnBorder" onclick="removeClass()"/>
+<input type="button"  value="css재설정" class="btnBorder" onclick="testClass()"/>
+<div id="div2" class="testCss">클래스 설정</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- <link rel="stylesheet" type="text/css"  href="http://localhost/html_prj/common/main_v20230217.css"/> -->
+<style type="text/css">
+
+</style>
+<!-- jQuery CDN 시작-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- jQuery CDN 끝-->
+<!-- datapicker start-->
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <!--  <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<!-- datapicker end-->
+
+
+<script type="text/javascript">
+$( function() {
+    $( "#datepicker" ).datepicker();
+    $( "#datepicker2" ).datepicker();
+  } );
+  
+</script>
+</head>
+<body>
+시작일 : <input type="text" id="datepicker">
+종료일 : <input type="text" id="datepicker2">
+</body>
+</html>

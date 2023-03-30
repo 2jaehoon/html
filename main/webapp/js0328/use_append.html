@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css"  href="http://localhost/html_prj/common/main_v20230217.css"/>
+<style type="text/css">
+#wrap{width: 400px}
+#controlImg{text-align: right;}
+</style>
+<!-- jQuery CDN 시작-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- jQuery CDN 끝-->
+<script type="text/javascript">
+var cnt=0;
+function addDiv(){
+	if( cnt>4 ){ alert("4개까지만 추가 가능");
+	return;}
+	var output = "<div><label>이름</label>" +
+	'<input type="text" name="name" class="inputBox" /></div>';
+	
+	$("#data").append(output);
+	cnt++;
+}
+
+function removeDiv(){
+	$("#data div:last").remove();
+	cnt--;
+	if(cnt<0){
+		cnt=0;
+	}
+}
+</script>
+</head>
+<body>
+<div id="wrap">
+<div id="controlImg">
+<a href="javascript:addDiv()"><img alt="추가" src="images/add.png" title="추가"></a>
+<a href="javascript:removeDiv()"><img alt="삭제" src="images/remove.png" title="삭제"></a>
+</div>
+
+<div id="data">
+<label>이름</label>
+<input type="text" name="name" class="inputBox" />
+</div>
+</div>
+</body>
+</html>

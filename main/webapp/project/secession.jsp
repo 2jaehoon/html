@@ -1,0 +1,273 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MY-SUB>내 정보관리>회원탈퇴</title>
+<style type="text/css">
+
+</style>
+		<link rel="stylesheet" type="text/css" href="http://localhost/html_prj/project/css/common/ui.common.css"/>
+		<link rel="stylesheet" type="text/css" href="http://localhost/html_prj/project/css/common/jquery.mCustomScrollbar.min.css" />   
+		  
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery-ui-1.12.0.min.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery.easing.1.3.min.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery.bxslider.min.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery.blockUI.min.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/TweenMax.min.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery.cookie.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/ui.common.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/subway.common.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/jsrender.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/jquery.tmpl.min.js"></script>
+        <script type="text/javascript" src="http://localhost/html_prj/project/js/common/waffle.utils.js"> </script>
+
+<script type="text/javascript">
+</script>
+
+<link rel="stylesheet" type="text/css" href="http://localhost/html_prj/project/css/secession/ui.mypage.css" />
+<script type="text/javascript" src="http://localhost/html_prj/project/js/secession/leave_member.js"></script>
+
+</head>
+<body>
+
+
+<div id="wrap">
+<!-- inc header s -->
+<div id="header">
+    <script>
+        /*<![CDATA[*/
+        var memberVO = false;
+        /*]]*/
+    </script>
+    <div class="content">
+        <h1 class="logo"><a href="http://localhost/html_prj/project/%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B42.jsp">JaeGun's Sandwich</a></h1>
+        <!-- gnb -->
+         <nav id="gnb">
+            <ul>
+                <li>
+                    <a class="dp1" href="#none">메뉴소개</a>
+                    <div class="dp2">
+                        <ul>
+                            <li>
+                                <a href=http://localhost/html_prj/project/%EB%A9%94%EB%89%B4%EC%86%8C%EA%B0%9C_%EB%A1%9C%EA%B7%B8%EC%9D%B8.jsp>샌드위치</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            
+                <li>
+                    <a href="#none" class="dp1">재건쓰</a>
+                    <div class="dp2">
+                        <ul>
+                            <li><a href="http://localhost/html_prj/project/menu_promise_login.jsp">재건쓰 약속</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" class="dp1">가맹점</a>
+                    <div class="dp2">
+                        <ul>
+                            <li><a href="http://localhost/html_prj/project/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88_%EB%A1%9C%EA%B7%B8%EC%9D%B8.jsp">재건쓰 프랜차이즈</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="dp1" href="javascript:void(0);">온라인 주문</a>
+                    <div class="dp2">
+                        <ul>
+                            <li><a href="http://localhost/html_prj/project/fast_sub_step1.jsp">FAST-SUB</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!--// gnb -->
+
+        <!-- util menu -->
+        <div class="util_menu">
+            <ul>
+                
+                    <li class="after_sign"><a href="http://localhost/html_prj/project/%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.jsp">로그아웃</a></li>
+                    <li class="after_sign"><a href="http://localhost/html_prj/project/mysub.jsp">MY-SUB</a></li>
+                    <li class="icon_menu cart on"><!-- 장바구니담았을때 class="on"추가 -->
+                        <!-- <a href="/cart/fastsub"> -->
+                        <a href="http://localhost/html_prj/project/cart_null.jsp">
+                            <span class="blind">장바구니</span>
+                            <strong>0</strong>
+                        </a>
+                    </li>
+                
+                
+                <li class="icon_menu global_subway">
+                    <a href="http://www.subway.com/en-us/exploreourworld" target="_blank" title="Global Subway"><span class="blind">Global Subway</span></a>
+                </li>
+            </ul>
+        </div>
+        <!--// util menu -->
+    </div>
+</div>
+<!--// inc header e -->
+            
+            
+  <!-- container s -->
+            <div class="bg_gray" id="container">
+    <!-- sub content -->
+    <div id="content">
+        <!-- 내정보관리 > 회원탈퇴 -->
+        <div class="manage_wrapper">
+            <h2 class="subTitle_02">회원탈퇴</h2>
+
+            <div class="manage_cont_box">
+                <!-- mbs_withdraw -->
+                <div class="mbs_withdraw">
+                    <h3 class="h_title"><em>황충연</em> 님의 써브웨이 멤버십 현황입니다.</h3>
+                    <!-- 2019-11-15 회원탈퇴 안내 문구 수정 -->
+                    <p class="mbs_noti able"><!-- 3000P 이상일때 class="able" 추가 -->
+                        <span>황충연</span> 님의 써브카드 총 보유금액은 <strong>0</strong>원으로
+                        환불신청 후 0원이 되어야 탈퇴가 가능합니다.<br />
+                        이 점 유의하시어 아래 사항들을 확인하시고 회원탈퇴에 대해 다시 한 번 신중하게 결정해 주세요.
+                    </p>
+                    <!--// 2019-11-15 회원탈퇴 안내 문구 수정 -->
+
+                    <!-- 써브카드 환불안내 -->
+                    <div class="info_wrapper">
+                        <ul class="info_contet">
+                            <li>
+                                <div class="fre">
+                                    <strong>써브카드 환불 안내<span class="i_mag"></span></strong>
+                                </div>
+                                <div class="ask">
+                                    <div class="ask_text">
+                                        써브카드의 충전취소와 충전금액 환불은 아래와 같이 진행하실 수 있습니다.<br /><br />
+                                        <h4>(1) 충전 취소</h4>
+                                        <ul>
+                                            <li>써브카드 충전 후 거래이력이 없을 경우 충전 취소가 가능합니다.</li>
+                                            <li>*온라인 충전 : 최대 7일 이내 홈페이지 혹은 앱의 "MY-SUB → 써브카드 → 이용내역" 충전 취소버튼으로 진행.</li>
+                                            <li>*오프라인 충전 : 7일 이내 영수증과 결제 시 사용한 카드(신용/체크카드)와 취소할 써브 카드를 지참하여 해당 매장에 방문.</li>
+                                        </ul>
+                                        <h4>(2) 환불</h4>
+                                        <ul>
+                                            <li>총 충전금액의 60%이상(1만원 이하는 80%)을 사용한 경우 잔액 환불이 가능합니다.</li>
+                                            <li>고객센터를 통해 상담원에게 은행명, 계좌번호, 예금주명을 전달하여 환불 신청을 하실 수 있으며,</li>
+                                            <li>환불 신청 시 영업일 기준 최대 2주 정도 소요될 수 있습니다.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--// 써브카드 환불안내 -->
+
+                    <div class="mbs_status">
+                        <ul>
+                            <!-- 2019-11-15 멤버십 등급, 보유카드 갯수 삭제 <li>
+                                <a href="#">
+                                    <strong>등급</strong>
+                                    <div class="float_r">
+                                        <span class="level w_level">Welcome</span>
+                                            - 등급 class name 안내
+                                            - 웰컴 class="w_level"
+                                            - 실버 class="s_level"
+                                            - 골드 class="g_level"
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <strong>써브카드 총 보유카드</strong>
+                                    <div class="float_r">
+                                        <em class="font_sw">2</em>개
+                                    </div>
+                                </a>
+                            </li> // 2019-11-15 멤버십 등급, 보유카드 갯수 삭제 -->
+                            <li>
+                                <a href="/mypage/subcard">
+                                    <strong>써브카드 총 보유금액</strong>
+                                    <div class="float_r">
+                                        <em class="font_sw">
+                                            0
+                                        </em>원
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/mypage/point">
+                                    <strong>멤버십 포인트</strong>
+                                    <div class="float_r">
+                                        <em class="font_sw">
+                                            0
+                                            P</em>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/mypage/coupon">
+                                    <strong>사용가능 쿠폰</strong>
+                                    <div class="float_r">
+                                        <em class="font_sw">0</em>장
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 안내사항 -->
+                    <div class="inquiry_notice">
+                        <ul>
+                            <li>회원탈퇴 시에는 고객님의 개인정보와 등록하신 써브카드의 정보가 모두 삭제됩니다.</li>
+                            <li>회원탈퇴 시 소지하고 계신 써브카드의 잔액이 남아있는 경우 잔액환불을 통해 남은 금액이 0원이 되어야 회원탈퇴가 가능하며, <br />중지된 카드는 재사용 또는 재등록이 불가능합니다.
+                            </li>
+                            <li>잔액이 남아 있지않은 써브카드는 탈퇴와 함께 자동 중지되어 재사용 또는 재등록이 불가능합니다.</li>
+                            <li>회원탈퇴 시에는 멤버십 포인트가 모두 소멸됩니다.</li>
+                            <li>회원탈퇴 시에는 발급된 쿠폰이 모두 소멸되며 재발행이 불가능합니다.</li>
+                        </ul>
+                    </div>
+                    <!--// 안내사항 -->
+                    <label class="form_checkbox">
+                        <input id="chk-value" type="checkbox" />
+                        <span class="icon"></span> 회원탈퇴 후 써브웨이 멤버십 서비스 및 등록한 써브카드의 소유권 상실에 대해 동의합니다.
+                        <em>(필수)</em>
+                    </label>
+                </div>
+                <!--// mbs_withdraw -->
+                <div class="btn_area">
+                    <!-- <a class="btn bgc_white" href="/mypage" style="width:170px;"><span>취소</span></a> --><!-- 기존코드 -->
+                    <a class="btn bgc_white" href="http://localhost/html_prj/project/mysub.jsp" style="width:170px;"><span>취소</span></a><!--  hcy 링크-->
+                    <a class="btn bgc_point i_reg" href="http://localhost/html_prj/project/%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.jsp" id="submitBtn" style="width:170px;"><span>회원탈퇴</span></a>
+                </div>
+            </div>
+        </div>
+        <!--// 내정보관리 > 회원탈퇴 -->
+    </div>
+    <!--// sub content -->
+</div>
+            
+<!-- footer -->
+<div id="footer">
+	    <div class="content">
+	        <!-- util menu -->
+	        <div class="util_menu">
+	            <ul>
+	                <li><a href="http://localhost/html_prj/project/manager/login.jsp" target="_blank">관리자</a></li>
+	            </ul>
+	        </div>
+	        <!--// util menu -->
+
+	        <span class="addr">서울특별시 강남구 테헤란로 132(역삼동) 한독약품빌딩 8층</span>
+	        <span class="rep">대표 : JAEGEON LEE(재건이)</span>
+	        <span class="tel">전화 : 02-797-5036</span>
+			<span class="rep">사업자등록번호 : 123-45-67890</span>
+	        <p class="copyright">JAEGUN`S SANDWICH® is a Registered Trademark of Subway IP LLC. © 2021 JAEGUN`S SANDWICH IP LLC. All Rights Reserved.</p>
+	    </div>
+	</div>
+            <!--// inc footer e -->
+
+         
+</body>
+</html>

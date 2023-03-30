@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css"  href="http://localhost/html_prj/common/main_v20230217.css"/>
+<style type="text/css">
+
+</style>
+<!-- jQuery CDN 시작-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- jQuery CDN 끝-->
+<script type="text/javascript">
+$(function(){
+	$("#btn").click(function(){
+	var arr = ["김규미","모민경","윤상준","이단군","황충연"];
+	//jQuery에서 제공하는 each함수를 사용하여 반복할 수 있다.
+	//$.each(배열명, function(인덱스, 요소를 저장할 변수){
+		//요소를 저장할 변수
+	//})
+	var output = "<ul>";
+	$.each( arr,function(i, ele){
+		output += "<li>" + i + ", " + ele + "</li>";
+	} );
+	output += "</ul>";
+	
+	$("#output").html( output );
+	});//click
+}); //ready
+</script>
+</head>
+<body>
+<input type = "button" value = "클릭" class = "btnBorder" id = "btn"/>
+<div id = "output"></div>
+</body>
+</html>

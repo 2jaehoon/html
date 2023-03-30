@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+
+window.onload = function(){
+	document.getElementById("kd").addEventListener( "keydown", kd );
+	document.getElementById("ku").addEventListener( "keyup", ku );
+	document.getElementById("ssn").addEventListener( "keyup", moveFocus );
+	document.getElementById("info").addEventListener( "keyup", infoLeng );
+	
+}
+
+function kd( evt ){//addEventListener 함수 안에서 생성된 이벤트 객체를 할당해준다.
+	//키보드가 눌려지면 이벤트가 발생한다.
+	//alert( evt.which + " / " + evt.keyCode );
+	//키가 눌렸을 때 키의 정보를 얻을 수 있지만 값이 입력되기 전이기 때문에
+	//값이 나오지 않는다.
+	document.getElementById("output").innerHTML = "키코드 : " + evt.which 
+	+ ", 키 텍스트 : " + document.frm.kd.value + ", 값의 길이 : "
+	+ document.frm.kd.value.length;
+}//kd
+
+function ku( evt ){
+	document.getElementById("output").innerHTML = "키코드 : " + evt.which 
+	+ ", 키 텍스트 : " + document.frm.ku.value + ", 값의 길이 : "
+	+ document.frm.ku.value.length;
+}//ku
+
+function moveFocus(){//이벤트를 받을 필요가 없다.
+	var obj = document.frm;
+	if( obj.ssn.value.length==6 ){
+		obj.ssn2.focus();
+	}//end if
+	
+}//moveFocus
+
+function infoLeng( ){
+	var obj = document.frm;
+	var leng = obj.info.value.length;
+	if(leng > 100){
+		alert("100자까지만 입력 ")
+		obj.info.value = obj.info.value.substring(0,100);
+	}//end if
+	document.getElementById("divLeng").innerHTML = obj.info.value.length + " / " + 100;
+}//infoLeng
+
+</script>
+</head>
+<body>
+<form name = "frm">
+<label>키 다운</label>
+<input type = "text" name = "kd" id = "kd" class = "inputBox" value = "김경태"/><br/>
+<label>키 업</label>
+<input type = "text" name = "ku" id = "ku" class = "inputBox" value = "김경태"/><br/>
+
+<input type = "text" name = "ssn" id = "ssn" class = "inputBox"  style = "width:60px" maxlength="6"/>
+-
+<input type = "password" name = "ssn2" id = "ssn2" class = "inputBox"  style = "width:60px" maxlength="6"/><br>
+
+<textarea class = "inputBox" style = "width: 400; height: 150px" name = "info" id = "info"></textarea>
+<div id = "divLeng"></div>
+
+</form>
+<div id = "output"></div>
+</body>
+</html>

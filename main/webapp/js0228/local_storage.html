@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href = "http://localhost/html_prj/common/main_v20230217.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+window.onload= function(){
+	document.getElementById("ses_add").addEventListener("click", addValue);
+	document.getElementById("ses_get").addEventListener("click", getValue);
+	document.getElementById("ses_remove").addEventListener("click", removeValue);
+	document.getElementById("ses_clear").addEventListener("click", clearSession);
+}
+
+function clearSession(){
+	//1. 스토리지 얻기
+	//window 객체 생략 가능
+	var ss = window.sessionStorage;
+	//2. 스토리지의 저장된 모든 값을 삭제
+	ss.clear();
+	
+}
+
+function removeValue(){
+	//1. 스토리지 얻기
+	//window 객체 생략 가능
+	var ss = window.sessionStorage;
+	//2. 삭제
+	ss.removeItem("ses_name");
+}
+
+function getValue(){
+	//1. 스토리지 얻기
+	var ss = window.sessionStorage;
+	//2 값 얻기
+	var output = "";
+	output += "이름 : " + ss.getItem("ses_name") + "<br>";
+	output += "나이 : " + ss.getItem("ses_age") + "<br>";
+	
+	document.getElementById("output").innerHTML = output;
+}
+
+
+function addValue(){
+	
+	//1. 스토리지 얻기
+	//sessionStrorage는 접속자가 접속했을 때에만 값이 유지
+	var ss = window.sessionStorage;
+	alert( ss );
+	//2. 값 설정
+	ss.setItem("ses_name", "이재훈");
+	ss.setItem("ses_age", 24);
+}
+</script>
+</head>
+<body>
+<input type = "button" value = "세션스토리지값 설정"  id = "ses_add"class = "btnBorder"/>
+<input type = "button" value = "세션스토리지값 얻기"   id = "ses_get" class = "btnBorder"/>
+<input type = "button" value = "세션스토리지값 삭제"  id = "ses_remove" class = "btnBorder"/>
+<input type = "button" value = "세션스토리지값 모두삭제"  id = "ses_clear" class = "btnBorder"/>
+<div id = "output"></div>
+</body>
+</html>
