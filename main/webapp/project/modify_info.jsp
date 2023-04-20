@@ -129,7 +129,7 @@
                         <section class="form_box">
                             <div class="write_info_wrap">
                             	<!-- 2019-11-15 비밀번호변경 버튼 추가 -->
-								<a class="btn bgc_gray_02 h_35 squre go_pw" href="javascript:void(0);" id="pop" onclick="view.changePw(); return false;" style="width:132px;">
+								<a class="btn bgc_gray_02 h_35 squre go_pw" id="pop" onclick="view.changePw(); return false;" style="width:132px;">
 									<span>비밀번호 변경</span>
 								</a>
 								<!--// 2019-11-15 비밀번호변경 버튼 추가 -->

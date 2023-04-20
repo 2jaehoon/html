@@ -88,12 +88,40 @@
 		}
 		$(document).ready(function(){
 			mainScript();
+			
+			
 		});
 		/* 2018.01.30 공지사항 슬라이드 배너 스크립트 추가 */
 		$(function() {
 			$(".bxslider").bxSlider();
 		});
+		
+		
+		$(function() {
+			<%
+			boolean flag = true;//로그인한 상태를 flag로 받아올 예정 임시로 true값을 부여
+			%>
+			$(".wrap").click(function(){
+				<%
+				if(flag){
+					%>
+					if(confirm(" 주문하시려면 온라인주문에서 주문하셔야 합니다.이동하시겠습니까?")){
+						alert("이동")
+					location.href="http://localhost/html_prj/project/fast_sub_step1.jsp";
+					}else{
+						alert("이동X")
+					}
+					<%
+				}
+				%>
+			});
+		});
 	</script>
+	
+
+	
+	
+	
 
     </head>
     <!--// inc header e -->
@@ -180,7 +208,7 @@
 	<div class="main_tap_event_wrapper">
 		<ul>
 			<li>
-				<div class="wrap">
+				<div class="wrap1">
 					
 						<a href="http://localhost/html_prj/project/%EB%A9%94%EB%89%B4%EC%86%8C%EA%B0%9C.jsp">
 							<div class="img"><img alt="에그마요 꿀조합 시리즈" src="http://localhost/html_prj/project/images/main_PC.jpg" /></div>

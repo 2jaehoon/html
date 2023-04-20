@@ -94,7 +94,6 @@ var view = {
             $('#subPw').val('');
         });
     },
-
     zipCodeCallback: function (d) {
         fullAddr = d.roadAddress;
 
@@ -279,6 +278,8 @@ var view = {
             subPw: $iframe.find('#subPw').val(),
             memberAgrVoList: arrayObj
         }
+        
+        
 
         var param = JSON.stringify(obj);
 
@@ -338,6 +339,7 @@ function closeIFrame() {
 
 function writeIFrame() {
     var flag = true;
+
     var $iframe = $('iframe').contents();
 
     var pw = $iframe.find('#pw');
@@ -411,4 +413,9 @@ function writeIFrame() {
     /* else {
         alert('비밀번호 양식을 맞춰주세요.');
     }*/
+    alert(flag)
+    if(flag==true){
+	location.href="http://localhost/html_prj/project/modify_info.html";
+}
+    
 }

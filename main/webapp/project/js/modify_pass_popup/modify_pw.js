@@ -13,9 +13,11 @@ var view = {
     /*---------------------------------------------------*/
     bindEvent: function () {
         // 비밀번호 수정버튼 클릭 이벤트
-        /*$('#pwInfo').on('click', function () {
+        $('#pwInfo').on('click', function () {
+			
             view.modify();
-        });*/
+            
+        });
 
         // 비밀번호 입력할때 빈값/일치여부 체크
         //$('.input_pw').on('keyup', function (e) {

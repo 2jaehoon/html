@@ -218,13 +218,7 @@
 									</dd>
 								</dl>
 								
-								<dl class="total_sum">
-									<dt>총 주문금액</dt>
-									<dd>
-										<strong class="eachTotalPrice">5,500</strong>
-										<span>원</span>
-									</dd>
-								</dl>
+								
 							</div>
 							
 						

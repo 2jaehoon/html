@@ -97,7 +97,7 @@
                 <div class="btn_area">
                     <a class="btn bgc_white btn_close" href="javascript:parent.closeIFrame();" style="width:130px;"><span>취소</span></a>
                     <!-- <a class="btn bgc_point i_reg" href="javascript:view.modify();" id="pwInfo" style="width:136px;"><span>변경하기</span></a> --><!-- 기존코드 -->
-                    <a class="btn bgc_point i_reg" href="javascript:view.modify();" style="width:136px;"><span>변경하기</span></a><!-- hcy 링크 -->
+                    <a class="btn bgc_point i_reg" href="javascript:view.modify();" id="pwInfo" style="width:136px;"><span>변경하기</span></a><!-- hcy 링크 -->
                 </div>
 			</div>
 		</div>
